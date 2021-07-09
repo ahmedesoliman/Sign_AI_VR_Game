@@ -235,6 +235,9 @@ public class ComputerCamera : MonoBehaviour
                        }*/
 
     }
+    /// <summary>
+    /// //////////////
+    /// </summary>
     ~ComputerCamera() {
 
         frame.Dispose();
