@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c0d00339f58d4376918ded2a84e3ffd, type: 3}
+  m_Name: Meditate
+  m_EditorClassIdentifier: 
+  type: 0
+  rtcSimple: {fileID: 221225426376263734}
+  rtcLocomotion: {fileID: 221604087940852974}
+  rtcOther: {fileID: 0}
+  enterClip: {fileID: 0}
+  exitClip: {fileID: 0}
+--- !u!221 &221225426376263734
+AnimatorOverrideController:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Simple
+  m_Controller: {fileID: 9100000, guid: 7e5e3872d84174d9a9ddf67745628fb5, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 74076314913792274, guid: 01d1638444abf44ee88e83c8ca7abdaa,
+      type: 2}
+    m_OverrideClip: {fileID: 74076314913792274, guid: 01d1638444abf44ee88e83c8ca7abdaa,
+      type: 2}
+--- !u!221 &221604087940852974
+AnimatorOverrideController:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Locomotion
+  m_Controller: {fileID: 9100000, guid: b6a6c19ecfb68436399931e717cd57b5, type: 2}
+  m_Clips: []

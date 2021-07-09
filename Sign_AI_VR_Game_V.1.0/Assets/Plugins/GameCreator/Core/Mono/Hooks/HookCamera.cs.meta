@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 741fd56c087524678b98559f34fa94ff
+labels:
+- GameCreator
+- Hook
+timeCreated: 1490255026
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: 5e73cce18d6c846e39e1b726fe710d57, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

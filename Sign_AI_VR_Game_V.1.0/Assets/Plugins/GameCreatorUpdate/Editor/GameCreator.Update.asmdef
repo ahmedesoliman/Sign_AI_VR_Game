@@ -1,0 +1,8 @@
+{
+    "name": "GameCreator.Update",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

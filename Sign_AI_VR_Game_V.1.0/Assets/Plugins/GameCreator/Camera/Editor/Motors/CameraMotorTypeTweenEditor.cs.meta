@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 93bb0896c7363417bbda8bd5faffde6c
+labels:
+- Camera
+- CameraMotor
+- GameCreator
+timeCreated: 1490804780
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
