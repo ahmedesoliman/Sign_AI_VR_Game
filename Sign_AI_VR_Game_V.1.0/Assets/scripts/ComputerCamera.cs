@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using OpenCvSharp;
 using System;
+using System.IO;
 using System.Windows;
 using System.Numerics;
-using System.IO;
+using System.Drawing;
 
 
 public class ComputerCamera : MonoBehaviour
 {
     static WebCamTexture webcam1;
+    public Texture2D tex;
     static Texture2D webcam2;
     public GameObject cam1;
     public GameObject cam2;
-
-    CascadeClassifier cascade;
+  
 
     Mat frame;
     Mat threshold_output = new Mat();
@@ -57,8 +58,9 @@ public class ComputerCamera : MonoBehaviour
             if (!webcam1.isPlaying)
                 webcam1.Play();
             webcam1.requestedFPS = 30;
-
-            predict(frame);
+        
+        load_ASL();
+   /*     predict(frame);*/
         //}
     }
 
@@ -68,7 +70,9 @@ public class ComputerCamera : MonoBehaviour
 
         GetComponent<Renderer>().material.mainTexture = webcam1;
         frame = OpenCvSharp.Unity.TextureToMat(webcam1);
-/*
+        Cv2.ImShow("Frame", frame);
+
+/*      
         load_ASL();*/
 
     }
@@ -76,12 +80,21 @@ public class ComputerCamera : MonoBehaviour
     void load_ASL()
     {
         //*** Preload letter train images starts ***//
-        int ascii = 97;
+        /*        int ascii = 97;*/
 
-        for (int i = 0; i < MAX_LETTERS; i++)
+        tex = Resources.Load <Texture2D>("/Train/vCopy");
+     
+
+        Mat img1 = new Mat(@"./Assets/Resources/Train/vCopy.png", ImreadModes.Color);
+
+  /*    img1 = OpenCvSharp.Unity.TextureToMat(tex);*/
+
+        Cv2.ImShow("img1", img1);
+        
+        /*for (int i = 0; i < MAX_LETTERS; i++)
         {
             String format = @"C:\\Unity_Projects\\Sign_AI_VR_Game_V.1.0\\Assets\\Resources\\Train\\{0}.png";
-            
+
             string filename = "";
 
             Debug.Log(string.Format(format, Convert.ToChar(ascii + i)));
@@ -89,40 +102,37 @@ public class ComputerCamera : MonoBehaviour
 
             filename = Path.GetFileName(string.Format(format, Convert.ToChar(ascii + i)));
 
-            Debug.Log(filename);
+            Debug.Log(filename);*/
 
-            Mat img1 = new Mat();
-             img1 = Cv2.ImRead(@"C:\\Unity_Projects\\Sign_AI_VR_Game_V.1.0\\Assets\\Resources\\Train\\vCopy.jpg", ImreadModes.Color);
-/*
-            Cv2.ImShow("img1", img1);*/
 
-            if (img1.Data != null)
-            {
-                Mat img2 = new Mat(), threshold_output = new Mat();
+        /*            if (img1.Data != null)
+                    {
+                        Mat img2 = new Mat(), threshold_output = new Mat();
 
-                Cv2.CvtColor(img1, img2, ColorConversionCodes.RGB2GRAY);
+                        Cv2.CvtColor(img1, img2, ColorConversionCodes.RGB2GRAY);
 
-                // Detect edges using Threshold
-                //The threshold method returns two outputs. The first is the threshold that was used and the second output is the thresholded image.
-                Cv2.Threshold(img2, threshold_output, THRESH, 255, ThresholdTypes.Binary);
+                        // Detect edges using Threshold
+                        //The threshold method returns two outputs. The first is the threshold that was used and the second output is the thresholded image.
+                        Cv2.Threshold(img2, threshold_output, THRESH, 255, ThresholdTypes.Binary);
 
-                //findcontours() function retrieves contours from the binary image using the openCV algorithm[193].
-                //The contours are a useful tool for shape analysisand object and detectionand recognition.
-                Cv2.FindContours(threshold_output, out contours, out hierarchy, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, new Point(0, 0));
+                        //findcontours() function retrieves contours from the binary image using the openCV algorithm[193].
+                        //The contours are a useful tool for shape analysisand object and detectionand recognition.
+                        Cv2.FindContours(threshold_output, out contours, out hierarchy, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, new Point(0, 0));
 
-                letters[i] = contours[0];
-                //contours returns a vector<vector<point>>
-            }
-        }
+                        letters[i] = contours[0];
+                        //contours returns a vector<vector<point>>
+                    }
+                }*/
         //***Preload letter train images ends***//
 
         //*** learn starts ***//
 
-        backGroundMOG2 = BackgroundSubtractorMOG2.Create(10000, 200, false);
+        // backGroundMOG2 = BackgroundSubtractorMOG2.Create(10000, 200, false);
 
         //***learn ends  ***//
+        /*    }*/
+    } 
 
-    } /* end of asl_init()*/
     void predict(Mat frame)
     {
             /*    Cv2.ImShow("Frame ", frame);*/
@@ -241,6 +251,17 @@ public class ComputerCamera : MonoBehaviour
         frame.Dispose();
         frame.Release();
     }
+
+/*    //convert image to bytearray
+    public byte[] imgToByteArray(Image img)
+    {
+        using (MemoryStream mStream = new MemoryStream())
+        {
+            img.Save(mStream, img.RawFormat);
+            return mStream.ToArray();
+        }
+    }*/
+
 }
 
        
