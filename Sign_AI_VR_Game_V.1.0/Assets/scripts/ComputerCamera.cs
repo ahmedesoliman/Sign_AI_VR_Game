@@ -44,8 +44,8 @@ public class ComputerCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        while (true)
-        {
+        //while (true)
+        //{
             WebCamDevice[] devices = WebCamTexture.devices;
             if (webcam1 == null)
                 webcam1 = new WebCamTexture(devices[1].name);
@@ -59,7 +59,7 @@ public class ComputerCamera : MonoBehaviour
             webcam1.requestedFPS = 30;
 
             predict(frame);
-        }
+        //}
     }
 
     // Update is called once per frame

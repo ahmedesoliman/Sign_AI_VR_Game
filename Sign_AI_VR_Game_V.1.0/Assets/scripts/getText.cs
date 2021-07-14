@@ -26,11 +26,11 @@ public class getText : MonoBehaviour
 
     IEnumerator callText()
     {
-        StreamReader reader = new StreamReader(@"C:\Unity_Projects\Sign_AI_VR_Game_V.1.0\Assets\StreamingAssets\RecallText\Alphabets.txt");
+        StreamReader reader = new StreamReader(@".\Assets\StreamingAssets\RecallText\Alphabets.txt");
 
         // Read entire text file with ReadToEnd.
         int counter = 0;
-        int maxCount = 10;
+        int maxCount = 3;
         string contents = reader.ReadToEnd();
 
 
