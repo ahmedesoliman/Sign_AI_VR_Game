@@ -21,8 +21,26 @@ public class getText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       /* syncReading();*/
+    }
+
+
+    void syncReading() {
+
+        StreamReader reader = new StreamReader(@".\Assets\StreamingAssets\RecallText\Alphabets.txt");
+
+        List<char> recivedChars = new List<char>();
+        
+        string temp = reader.ReadToEnd();
+
+        char lastchar = temp[temp.Length - 1];
+
+        Debug.Log("Last character" + lastchar);
+
 
     }
+
+
 
     IEnumerator callText()
     {
