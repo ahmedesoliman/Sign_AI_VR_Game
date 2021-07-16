@@ -68,7 +68,7 @@ public class ComputerCamera : MonoBehaviour
                 webcam1 = new WebCamTexture(devices[0].name);
             if (!webcam1.isPlaying)
                 webcam1.Play();
-            webcam1.requestedFPS = 25;
+            webcam1.requestedFPS = 30;
         for (int i = 0; i < devices.Length; i++)
         {
   /*          Debug.Log(devices[i].name);*/
@@ -225,10 +225,9 @@ public class ComputerCamera : MonoBehaviour
                     asl_letter = (char)(((int)0));
                 }
 
-                Debug.Log(asl_letter);
-              /*  Debug.Log("The letter is: " + asl_letter + " | difference: " + lowestDiff);*/
-           
-                getText.preditText(asl_letter.ToString());
+                Debug.Log("The letter is: " + asl_letter + " | difference: " + lowestDiff);
+
+                getText.predictText(asl_letter);
             }
         }
     }

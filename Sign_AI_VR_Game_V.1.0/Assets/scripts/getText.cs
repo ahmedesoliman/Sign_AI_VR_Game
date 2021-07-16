@@ -43,15 +43,16 @@ public class getText : MonoBehaviour
 
     }*/
 
-    public static void preditText(String str) {
+    public static void predictText(Char str) {
 
-        if (str == " ")
+        int asciiCode = (int)(Convert.ToChar(str));
+        if (asciiCode == 0)
         {
-            changingText.text = "N/A";
+            changingText.text = "..";
         }
         else
         {
-            changingText.text = str;
+            changingText.text = str.ToString();
         }
    
     }

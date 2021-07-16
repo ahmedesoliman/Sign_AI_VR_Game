@@ -11631,6 +11631,7 @@ GameObject:
   - component: {fileID: 339735452}
   - component: {fileID: 339735454}
   - component: {fileID: 339735453}
+  - component: {fileID: 339735455}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -11710,7 +11711,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 257
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -11776,6 +11777,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339735451}
   m_CullTransparentMesh: 0
+--- !u!114 &339735455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339735451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 660a031724e709b4baaa7dc54c3188ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &339888083
 GameObject:
   m_ObjectHideFlags: 0
@@ -47544,7 +47557,6 @@ GameObject:
   - component: {fileID: 1384027072}
   - component: {fileID: 1384027071}
   - component: {fileID: 1384027070}
-  - component: {fileID: 1384027073}
   m_Layer: 0
   m_Name: Canvas Box
   m_TagString: Untagged
@@ -47632,18 +47644,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1384027073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384027068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 660a031724e709b4baaa7dc54c3188ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1384105785
 GameObject:
   m_ObjectHideFlags: 0
