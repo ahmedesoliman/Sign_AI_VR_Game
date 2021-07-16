@@ -16,15 +16,18 @@ public class ComputerCamera : MonoBehaviour
     static Texture2D webcam2;
     public GameObject cam1;
     public GameObject cam2;
-  
+
 
     Mat frame;
     Mat threshold_output = new Mat();
     Mat fgMaskMOG2 = new Mat();
 
+    int DIFF_THRESH = 230;
     double THRESH = 200;
     int maxIndex = 0;
     int MAX_LETTERS = 26;
+    int frames = 0;   // frames varaible to count how many frames processed
+    int SAMPLE_RATE = 1;
 
     OpenCvSharp.Point[] letters = new Point[26];
     OpenCvSharp.Point[][] feature_image;
@@ -104,26 +107,26 @@ public class ComputerCamera : MonoBehaviour
         }
 
 /*        var backGroundMOG2 = BackgroundSubtractorMOG2.Create(2000, 20, true);*/
-    } 
+    }
 
     void predict(Mat frame)
     {
         Cv2.ImShow("Frame ", frame);
         cam1.GetComponent<Renderer>().material.mainTexture = webcam1;
 
-            frame = OpenCvSharp.Unity.TextureToMat(webcam1);
+        frame = OpenCvSharp.Unity.TextureToMat(webcam1);
 
         //Creates MOG2 Background Subtractor.
         backgroundMOG2 = BackgroundSubtractorMOG2.Create();
 
-            // Crop Frame to smaller region using the rectangle of interest method
+        // Crop Frame to smaller region using the rectangle of interest method
 
-            OpenCvSharp.Rect myROI = new OpenCvSharp.Rect(200, 200, 200, 200);
+        OpenCvSharp.Rect myROI = new OpenCvSharp.Rect(200, 200, 200, 200);
 
-            Mat cropFrame = frame[myROI];
+        Mat cropFrame = frame[myROI];
 
-            Cv2.ImShow("Crop Frame", cropFrame);
-        
+        Cv2.ImShow("Crop Frame", cropFrame);
+
         Mat canny = new Mat();
         Cv2.Canny(cropFrame, canny, 50, 200);
         Cv2.ImShow("Canny", canny);
@@ -131,46 +134,46 @@ public class ComputerCamera : MonoBehaviour
         // Update the background model
         backgroundMOG2.Apply(cropFrame, fgMaskMOG2, 1);
 
-            webcam2 = OpenCvSharp.Unity.MatToTexture(fgMaskMOG2);
+        webcam2 = OpenCvSharp.Unity.MatToTexture(fgMaskMOG2);
 
-            Cv2.ImShow("Foregound Mask", fgMaskMOG2);
+        Cv2.ImShow("Foregound Mask", fgMaskMOG2);
 
-            cam2.GetComponent<Renderer>().material.mainTexture = webcam2;
+        cam2.GetComponent<Renderer>().material.mainTexture = webcam2;
 
-            // Detect edges using Threshold
+        // Detect edges using Threshold
 
-            Cv2.Threshold(canny, threshold_output, THRESH, 255, ThresholdTypes.Binary);
+        Cv2.Threshold(canny, threshold_output, THRESH, 255, ThresholdTypes.Binary);
 
-            // Find contours
-            Cv2.FindContours(threshold_output, out feature_image, out hierarchy, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, new Point(0, 0));
+        // Find contours
+        Cv2.FindContours(threshold_output, out feature_image, out hierarchy, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, new Point(0, 0));
 
-            double largest_area = 0;
+        double largest_area = 0;
 
-            for (int j = 0; j < feature_image.Length; j++)
+        for (int j = 0; j < feature_image.Length; j++)
+        {
+            double area = Cv2.ContourArea(feature_image[j], false); // Find the area of the contour
+            if (area > largest_area)
             {
-                double area = Cv2.ContourArea(feature_image[j], false); // Find the area of the contour
-                if (area > largest_area)
-                {
-                    largest_area = area;
-                    maxIndex = j; // Store the index of largest contour
-                }
+                largest_area = area;
+                maxIndex = j; // Store the index of largest contour
             }
+        }
 
-            // creates Mat of Zeros = Black frame to draw on 
-            Mat contourImg = Mat.Zeros(cropFrame.Size(), MatType.CV_8UC(3));
-            // Draw Contours         
-            Cv2.DrawContours(contourImg, feature_image, maxIndex, new Scalar(0, 0, 255), 2, LineTypes.Link8, hierarchy, 0, new Point(0, 0));
+        // creates Mat of Zeros = Black frame to draw on 
+        Mat contourImg = Mat.Zeros(cropFrame.Size(), MatType.CV_8UC(3));
+        // Draw Contours         
+        Cv2.DrawContours(contourImg, feature_image, maxIndex, new Scalar(0, 0, 255), 2, LineTypes.Link8, hierarchy, 0, new Point(0, 0));
 
-            Cv2.ImShow("Countour Img", contourImg);
+        Cv2.ImShow("Countour Img", contourImg);
 
 
         //Reset if too much noise
-    /*    Scalar sums = sum(drawing1);
-            s = sums[0] + sums[1] + sums[2] + sums[3];
-          if (s >= RESET_THRESH){
-          backGroundMOG2 = createBackgroundSubtractorMOG2(10000, 200, false);
-           continue;
-        }*/
+        /*    Scalar sums = sum(drawing1);
+                s = sums[0] + sums[1] + sums[2] + sums[3];
+              if (s >= RESET_THRESH){
+              backGroundMOG2 = createBackgroundSubtractorMOG2(10000, 200, false);
+               continue;
+            }*/
 
 
         //if (contourImg.rows > 0)
@@ -183,21 +186,20 @@ public class ComputerCamera : MonoBehaviour
         //if (key == ' ')
         //backGroundMOG2 = createBackgroundSubtractorMOG2(10000, 200, false);
 
-        //f3_identify_letter
-   /*     if (feature_image.size() > 0 && frames++ > SAMPLE_RATE && feature_image[maxIndex].size() >= 5)
+        if (feature_image[0].Length > 0 && frames++ > SAMPLE_RATE && feature_image[maxIndex].Length >= 5)
         {
             {
-                RotatedRect testRect = fitEllipse(feature_image[maxIndex]);
+                RotatedRect testRect = Cv2.FitEllipse(feature_image[maxIndex]);
                 //fits an ellipse around a set of 2d points. The function calculates the ellipse that fits(in a least-sense) a set of 2D points best of all.
                 //it returns the rotated rectangle in which the ellipse is inscribed. the first algorithm - Param(points input 2d point set, stored in std::vector<> or Mat)
 
                 frames = 0;
 
-                double lowestDiff = HUGE_VAL;
+                double lowestDiff = double.MaxValue;
 
                 for (int i = 0; i < MAX_LETTERS; i++)
                 {
-                    if (letters[i].size() == 0)
+                    if (letters[i].Length == 0)
                         continue;
 
                     double difference = distance(letters[i], feature_image[maxIndex]);
@@ -213,18 +215,57 @@ public class ComputerCamera : MonoBehaviour
                 { // Dust
                     asl_letter = 0;
                 }
-*/
+
                 //ofstream myfile;
                 //myfile.open("output.txt", ios::out | ios::app);
                 //myfile << asl_letter;
-                //cout << "The letter is: " << asl_letter << " | difference: " << lowestDiff << endl;
+
+                Debug.Log("The letter is: " + asl_letter + " | difference: " + lowestDiff;
+                
                 //cout << "Writing the letter: " << asl_letter << " -> to a file.\n";
                 // myfile.close();
-                //displayLetter();
+            }
+        }
     }
+    double distance(Point a, Point[] b){
 
+                int maxDistAB = distance_2(a, b);
+                int maxDistBA = distance_2(b, a);
 
-    ~ComputerCamera() {
+                int maxDist = Math.Max(maxDistAB, maxDistBA);
+
+                return Math.Sqrt((double)maxDist);
+    }
+    int distance_2(Point a, Point[] b)
+            {
+                int maxDist = 0;
+                for (int i = 0; i < a.Length(); i++)
+                {
+                    int min = 1000000;
+                    for (int j = 0; j < b.Length; j++)
+                    {
+                        int dx = (a[i].x - b[j].x);
+
+                        int dy = (a[i].y - b[j].y);
+
+                        int tmpDist = dx * dx + dy * dy;
+
+                        if (tmpDist < min)
+                        {
+                            min = tmpDist;
+                        }
+
+                        if (tmpDist == 0)
+                        {
+                            break; // can't get better than equal.
+                        }
+                    }
+                    maxDist += min;
+                }
+                return maxDist;
+            } /* end of distance_2()*/
+
+~ComputerCamera() {
 
         frame.Dispose();
         frame.Release();
