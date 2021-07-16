@@ -11,30 +11,43 @@ using System.Drawing;
 
 public class ComputerCamera : MonoBehaviour
 {
-    static WebCamTexture webcam1;
+
     public UnityEngine.Object[] buffer;
-    static Texture2D webcam2;
-    public GameObject cam1;
-    public GameObject cam2;
+
+    static WebCamTexture webcam1;
+    static Texture2D tex1;
+    static Texture2D tex2;
+    static Texture2D tex3;
+
+    public GameObject display1;
+    public GameObject display2;
+    public GameObject display3;
 
 
-    Mat frame;
+    Mat frame = new Mat();
+    Mat canny = new Mat();
     Mat threshold_output = new Mat();
     Mat fgMaskMOG2 = new Mat();
+    Mat img1 = new Mat();
+    Mat img2 = new Mat(); 
+
 
     char asl_letter;
     int DIFF_THRESH = 230;
     double THRESH = 200;
     int maxIndex = 0;
     int MAX_LETTERS = 26;
+
     int frames = 0;   // frames varaible to count how many frames processed
     int SAMPLE_RATE = 1;
 
-    OpenCvSharp.Point[][] letters;
+    OpenCvSharp.Point[][] letters = new OpenCvSharp.Point[26][];
+    
+   /* OpenCvSharp.Point[][] letters;*/
     OpenCvSharp.Point[][] feature_image;
     OpenCvSharp.Point[][] contours;
-    
     OpenCvSharp.HierarchyIndex[] hierarchy;
+    OpenCvSharp.HierarchyIndex[] hierarchy1;
 
     BackgroundSubtractorMOG2 backgroundMOG2;
     BackgroundSubtractorKNN backgroundKNN;
@@ -50,8 +63,7 @@ public class ComputerCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-            WebCamDevice[] devices = WebCamTexture.devices;
+        WebCamDevice[] devices = WebCamTexture.devices;
             if (webcam1 == null)
                 webcam1 = new WebCamTexture(devices[0].name);
             if (!webcam1.isPlaying)
@@ -59,17 +71,18 @@ public class ComputerCamera : MonoBehaviour
             webcam1.requestedFPS = 25;
         for (int i = 0; i < devices.Length; i++)
         {
-            Debug.Log(devices[i].name);
+  /*          Debug.Log(devices[i].name);*/
         }
- 
+    
     }
 
     // Update is called once per frame
     void Update()
     {
-/*        load_ASL();*/
+        
         GetComponent<Renderer>().material.mainTexture = webcam1;
         frame = OpenCvSharp.Unity.TextureToMat(webcam1);
+        load_ASL();
         predict(frame);
 
     }
@@ -79,17 +92,11 @@ public class ComputerCamera : MonoBehaviour
 
         buffer = Resources.LoadAll("Train", typeof(Texture2D));
         int i = 0;
-        Debug.Log(buffer.Length);
+
         foreach (var image in buffer)
         {
-            
-            Mat img1 = new Mat();
 
             img1 = OpenCvSharp.Unity.TextureToMat((Texture2D)buffer[i]);
-
-            Cv2.ImShow("Img1", img1);
-
-            Mat img2 = new Mat(), threshold_output = new Mat();
 
             Cv2.CvtColor(img1, img2, ColorConversionCodes.RGB2GRAY);
 
@@ -99,12 +106,11 @@ public class ComputerCamera : MonoBehaviour
 
             //findcontours() function retrieves contours from the binary image using the openCV algorithm[193].
             //The contours are a useful tool for shape analysisand object and detectionand recognition.
-            Cv2.FindContours(threshold_output, out contours, out hierarchy, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, new Point(0, 0));
+            Cv2.FindContours(threshold_output, out contours, out hierarchy1, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, new Point(0, 0));
 
             letters[i] = contours[0];
             //contours returns a vector<vector<point>>
             i++;
-            Debug.Log(i);
         }
 
 /*        var backGroundMOG2 = BackgroundSubtractorMOG2.Create(2000, 20, true);*/
@@ -112,13 +118,13 @@ public class ComputerCamera : MonoBehaviour
 
     void predict(Mat frame)
     {
-        Cv2.ImShow("Frame ", frame);
-        cam1.GetComponent<Renderer>().material.mainTexture = webcam1;
+      /*  Cv2.ImShow("Frame ", frame);*/
+        display1.GetComponent<Renderer>().material.mainTexture = webcam1;
 
         frame = OpenCvSharp.Unity.TextureToMat(webcam1);
 
         //Creates MOG2 Background Subtractor.
-        backgroundMOG2 = BackgroundSubtractorMOG2.Create();
+    /*    backgroundMOG2 = BackgroundSubtractorMOG2.Create();*/
 
         // Crop Frame to smaller region using the rectangle of interest method
 
@@ -128,22 +134,24 @@ public class ComputerCamera : MonoBehaviour
 
         Cv2.ImShow("Crop Frame", cropFrame);
 
-        Mat canny = new Mat();
+        /// Finds edges in an image using Canny algorithm.
+
         Cv2.Canny(cropFrame, canny, 50, 200);
+
         Cv2.ImShow("Canny", canny);
 
         // Update the background model
-        backgroundMOG2.Apply(cropFrame, fgMaskMOG2, 1);
+        /*  backgroundMOG2.Apply(cropFrame, fgMaskMOG2, 1);*/
+        /* Cv2.ImShow("Foregound Mask", fgMaskMOG2);*/
 
-        webcam2 = OpenCvSharp.Unity.MatToTexture(fgMaskMOG2);
 
-        Cv2.ImShow("Foregound Mask", fgMaskMOG2);
-
-        cam2.GetComponent<Renderer>().material.mainTexture = webcam2;
-
-        // Detect edges using Threshold
+        // Detect edges using Threshold:/// Applies a fixed-level threshold to each array element.
 
         Cv2.Threshold(canny, threshold_output, THRESH, 255, ThresholdTypes.Binary);
+        
+        tex2 = OpenCvSharp.Unity.MatToTexture(canny);
+
+        display2.GetComponent<Renderer>().material.mainTexture = tex2;
 
         // Find contours
         Cv2.FindContours(threshold_output, out feature_image, out hierarchy, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, new Point(0, 0));
@@ -164,6 +172,10 @@ public class ComputerCamera : MonoBehaviour
         Mat contourImg = Mat.Zeros(cropFrame.Size(), MatType.CV_8UC(3));
         // Draw Contours         
         Cv2.DrawContours(contourImg, feature_image, maxIndex, new Scalar(0, 0, 255), 2, LineTypes.Link8, hierarchy, 0, new Point(0, 0));
+
+        tex3 = OpenCvSharp.Unity.MatToTexture(contourImg);
+
+        display3.GetComponent<Renderer>().material.mainTexture = tex3;
 
         Cv2.ImShow("Countour Img", contourImg);
 
@@ -187,23 +199,18 @@ public class ComputerCamera : MonoBehaviour
         //if (key == ' ')
         //backGroundMOG2 = createBackgroundSubtractorMOG2(10000, 200, false);
 
-        if (feature_image[0].Length > 0 && frames++ > SAMPLE_RATE && feature_image[maxIndex].Length >= 5)
+        if (feature_image.Length > 0 && feature_image[maxIndex].Length >= 5)
         {
             {
-                RotatedRect testRect = Cv2.FitEllipse(feature_image[maxIndex]);
-                //fits an ellipse around a set of 2d points. The function calculates the ellipse that fits(in a least-sense) a set of 2D points best of all.
-                //it returns the rotated rectangle in which the ellipse is inscribed. the first algorithm - Param(points input 2d point set, stored in std::vector<> or Mat)
-
-                frames = 0;
 
                 double lowestDiff = double.MaxValue;
 
                 for (int i = 0; i < MAX_LETTERS; i++)
                 {
-                    if (letters[i].Length == 0)
-                        continue;
-
+                    /*                    if (letters[i].Length == 0)
+                                            continue;*/
                     double difference = distance(letters[i], feature_image[maxIndex]);
+
 
                     if (difference < lowestDiff)
                     {
@@ -218,15 +225,10 @@ public class ComputerCamera : MonoBehaviour
                     asl_letter = (char)(((int)0));
                 }
 
-
-               // ofstream myfile;
-               //if (isalpha(asl_letter)){
-               //  myfile.open("C:\\Unity_Projects\\Sign_AI_VR_Game\\Sign_AI_VR_Game_V.1.0\\Assets\\StreamingAssets\\RecallText\\Alphabets.txt", ios::out | ios::app);
-               //myfile << asl_letter;
-               //myfile.close();
-
-                Debug.Log("The letter is: " + asl_letter + " | difference: " + lowestDiff);
-                
+                Debug.Log(asl_letter);
+              /*  Debug.Log("The letter is: " + asl_letter + " | difference: " + lowestDiff);*/
+           
+                getText.preditText(asl_letter.ToString());
             }
         }
     }
@@ -273,6 +275,7 @@ public class ComputerCamera : MonoBehaviour
 
         frame.Dispose();
         frame.Release();
+        Cv2.DestroyAllWindows();
     }
 
 }
