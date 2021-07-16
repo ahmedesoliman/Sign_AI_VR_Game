@@ -22,6 +22,7 @@ public class ComputerCamera : MonoBehaviour
     Mat threshold_output = new Mat();
     Mat fgMaskMOG2 = new Mat();
 
+    char asl_letter;
     int DIFF_THRESH = 230;
     double THRESH = 200;
     int maxIndex = 0;
@@ -29,7 +30,7 @@ public class ComputerCamera : MonoBehaviour
     int frames = 0;   // frames varaible to count how many frames processed
     int SAMPLE_RATE = 1;
 
-    OpenCvSharp.Point[] letters = new Point[26];
+    OpenCvSharp.Point[][] letters;
     OpenCvSharp.Point[][] feature_image;
     OpenCvSharp.Point[][] contours;
     
@@ -100,7 +101,7 @@ public class ComputerCamera : MonoBehaviour
             //The contours are a useful tool for shape analysisand object and detectionand recognition.
             Cv2.FindContours(threshold_output, out contours, out hierarchy, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, new Point(0, 0));
 
-            letters[i] = contours[0][0];
+            letters[i] = contours[0];
             //contours returns a vector<vector<point>>
             i++;
             Debug.Log(i);
@@ -207,46 +208,49 @@ public class ComputerCamera : MonoBehaviour
                     if (difference < lowestDiff)
                     {
                         lowestDiff = difference;
-                        asl_letter = 'a' + i;
+                        asl_letter = (char)(((int)'a') + i);
+                        
                     }
                 }
 
                 if (lowestDiff > DIFF_THRESH)
                 { // Dust
-                    asl_letter = 0;
+                    asl_letter = (char)(((int)0));
                 }
 
-                //ofstream myfile;
-                //myfile.open("output.txt", ios::out | ios::app);
-                //myfile << asl_letter;
 
-                Debug.Log("The letter is: " + asl_letter + " | difference: " + lowestDiff;
+               // ofstream myfile;
+               //if (isalpha(asl_letter)){
+               //  myfile.open("C:\\Unity_Projects\\Sign_AI_VR_Game\\Sign_AI_VR_Game_V.1.0\\Assets\\StreamingAssets\\RecallText\\Alphabets.txt", ios::out | ios::app);
+               //myfile << asl_letter;
+               //myfile.close();
+
+                Debug.Log("The letter is: " + asl_letter + " | difference: " + lowestDiff);
                 
-                //cout << "Writing the letter: " << asl_letter << " -> to a file.\n";
-                // myfile.close();
             }
         }
     }
-    double distance(Point a, Point[] b){
+    double distance(Point[] a, Point[] b){
 
                 int maxDistAB = distance_2(a, b);
+
                 int maxDistBA = distance_2(b, a);
 
                 int maxDist = Math.Max(maxDistAB, maxDistBA);
 
                 return Math.Sqrt((double)maxDist);
     }
-    int distance_2(Point a, Point[] b)
+    int distance_2(Point[] a, Point[] b)
             {
                 int maxDist = 0;
-                for (int i = 0; i < a.Length(); i++)
+                for (int i = 0; i < a.Length; i++)
                 {
                     int min = 1000000;
                     for (int j = 0; j < b.Length; j++)
                     {
-                        int dx = (a[i].x - b[j].x);
+                        int dx = (a[i].X - b[j].X);
 
-                        int dy = (a[i].y - b[j].y);
+                        int dy = (a[i].Y - b[j].Y);
 
                         int tmpDist = dx * dx + dy * dy;
 
