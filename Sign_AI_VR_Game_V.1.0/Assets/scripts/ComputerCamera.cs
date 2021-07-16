@@ -35,7 +35,7 @@ public class ComputerCamera : MonoBehaviour
     char asl_letter;
     int DIFF_THRESH = 230;
     double THRESH = 200;
-    int maxIndex = 0;
+    public static int maxIndex = 0;
     int MAX_LETTERS = 26;
 
     int frames = 0;   // frames varaible to count how many frames processed
