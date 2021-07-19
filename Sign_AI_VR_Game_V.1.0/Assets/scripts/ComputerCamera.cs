@@ -119,7 +119,7 @@ public class ComputerCamera : MonoBehaviour
     void predict(Mat frame)
     {
       /*  Cv2.ImShow("Frame ", frame);*/
-        display1.GetComponent<Renderer>().material.mainTexture = webcam1;
+      /*  display1.GetComponent<Renderer>().material.mainTexture = webcam1;*/
 
         frame = OpenCvSharp.Unity.TextureToMat(webcam1);
 
@@ -133,6 +133,10 @@ public class ComputerCamera : MonoBehaviour
         Mat cropFrame = frame[myROI];
 
         Cv2.ImShow("Crop Frame", cropFrame);
+
+        tex1 = OpenCvSharp.Unity.MatToTexture(cropFrame);
+
+        display1.GetComponent<Renderer>().material.mainTexture = tex1;
 
         /// Finds edges in an image using Canny algorithm.
 

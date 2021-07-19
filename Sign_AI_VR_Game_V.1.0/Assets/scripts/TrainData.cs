@@ -26,7 +26,7 @@ public class TrainData : MonoBehaviour
     }
     void Train(Mat frame)
     {
-        frame = OpenCvSharp.Unity.TextureToMat(webcam1);
+/*        frame = OpenCvSharp.Unity.TextureToMat(webcam1);*/
 
         OpenCvSharp.Rect myROI = new OpenCvSharp.Rect(200, 200, 200, 200);
         
