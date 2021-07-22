@@ -33,13 +33,15 @@ public class Predict_Script : MonoBehaviour
 
 
     char asl_letter;
-    int DIFF_THRESH = 250;
+    int DIFF_THRESH = 230;
     double THRESH = 200;
     public static int maxIndex = 0;
     int MAX_LETTERS = 26;
 
     int frames = 0;   // frames varaible to count how many frames processed
     int SAMPLE_RATE = 1;
+
+
 
     OpenCvSharp.Point[][] letters = new OpenCvSharp.Point[26][];
 
@@ -50,6 +52,7 @@ public class Predict_Script : MonoBehaviour
     OpenCvSharp.HierarchyIndex[] hierarchy1;
 
     BackgroundSubtractorMOG2 backgroundMOG2;
+
     BackgroundSubtractorKNN backgroundKNN;
     BackgroundSubtractorMOG backgroundMOG;
     BackgroundSubtractorGMG backgroundGMG;
@@ -93,7 +96,7 @@ public class Predict_Script : MonoBehaviour
     void load_ASL()
     {
 
-        buffer = Resources.LoadAll("Train", typeof(Texture2D));
+        buffer = Resources.LoadAll("Alpha", typeof(Texture2D));
         int i = 0;
 
         foreach (var image in buffer)
@@ -126,7 +129,7 @@ public class Predict_Script : MonoBehaviour
         frame = OpenCvSharp.Unity.TextureToMat(webcam1);
 
         //Creates MOG2 Background Subtractor.
-    /*    backgroundMOG2 = BackgroundSubtractorMOG2.Create();*/
+/*        backgroundMOG2 =  BackgroundSubtractorMOG2.Create();*/
 
         // Crop Frame to smaller region using the rectangle of interest method
 
@@ -142,25 +145,51 @@ public class Predict_Script : MonoBehaviour
 
         /// Finds edges in an image using Canny algorithm.
 
+        Mat dialtedst = new Mat();
+        Mat erodedst = new Mat();
+        Mat element = new Mat();
+
         Cv2.Canny(cropFrame, canny, 50, 200);
 
         Cv2.ImShow("Canny", canny);
 
+
         // Update the background model
-        /*  backgroundMOG2.Apply(cropFrame, fgMaskMOG2, 1);*/
-        /* Cv2.ImShow("Foregound Mask", fgMaskMOG2);*/
+        /*        backgroundMOG2.Apply(cropFrame, fgMaskMOG2, 1);*/
+        /*
+                Cv2.ImShow("Foregound Mask", fgMaskMOG2);*/
 
 
         // Detect edges using Threshold:/// Applies a fixed-level threshold to each array element.
 
         Cv2.Threshold(canny, threshold_output, THRESH, 255, ThresholdTypes.Binary);
-        
+
+        Mat rectelement = Cv2.GetStructuringElement(MorphShapes.Rect, new Size(3, 3));
+
+        Cv2.Dilate(threshold_output, dialtedst, rectelement );
+
+        Cv2.ImShow("Dialte", dialtedst);
+
+        Cv2.Erode(dialtedst, erodedst, rectelement);
+
+        Cv2.ImShow("erode dst", erodedst);
+
         tex2 = OpenCvSharp.Unity.MatToTexture(canny);
 
         display2.GetComponent<Renderer>().material.mainTexture = tex2;
 
         // Find contours
         Cv2.FindContours(threshold_output, out feature_image, out hierarchy, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, new Point(0, 0));
+/*
+        var contors = new OpenCvSharp.Point[]{};
+
+        if (feature_image.Length == 2)
+        {
+            contors = feature_image[0];
+        }
+        else contors = feature_image[1];
+
+        Mat big_contors = Math.Max(contors, contorsContourArea);*/
 
         double largest_area = 0;
 
@@ -177,7 +206,7 @@ public class Predict_Script : MonoBehaviour
         // creates Mat of Zeros = Black frame to draw on 
         Mat contourImg = Mat.Zeros(cropFrame.Size(), MatType.CV_8UC(3));
         // Draw Contours         
-        Cv2.DrawContours(contourImg, feature_image, maxIndex, new Scalar(0, 0, 255), 2, LineTypes.Filled, hierarchy, 0, new Point(0, 0));
+        Cv2.DrawContours(contourImg, feature_image, maxIndex, new Scalar(0, 0, 255), 2, LineTypes.Link8, hierarchy, 0, new Point(0, 0));
 
         tex3 = OpenCvSharp.Unity.MatToTexture(contourImg);
 
@@ -215,19 +244,22 @@ public class Predict_Script : MonoBehaviour
                 {
                     double difference = distance(letters[i], feature_image[maxIndex]);
 
+                    if (letters[i].Length == 0)
+                        continue;
 
                     if (difference < lowestDiff)
                     {
                         lowestDiff = difference;
+
                         asl_letter = (char)(((int)'a') + i);
-                        
+                        Debug.Log("-------: " + lowestDiff + "I==> " + i);
                     }
                 }
 
-                if (lowestDiff > DIFF_THRESH)
-                { // Dust
+/*                if (lowestDiff > DIFF_THRESH)
+                { // Reset if Dust
                     asl_letter = (char)(((int)0));
-                }
+                }*/
 
                 Debug.Log("The letter is: " + asl_letter + " | difference: " + lowestDiff);
 
@@ -243,7 +275,7 @@ public class Predict_Script : MonoBehaviour
 
                 int maxDist = Math.Max(maxDistAB, maxDistBA);
 
-                return Math.Sqrt(maxDist);
+                return Math.Sqrt((double)maxDist);
     }
     int distance_2(Point[] a, Point[] b)
             {
