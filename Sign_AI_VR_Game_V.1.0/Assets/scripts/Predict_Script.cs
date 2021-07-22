@@ -9,7 +9,7 @@ using System.Numerics;
 using System.Drawing;
 
 
-public class ComputerCamera : MonoBehaviour
+public class Predict_Script : MonoBehaviour
 {
 
     public UnityEngine.Object[] buffer;
@@ -24,12 +24,12 @@ public class ComputerCamera : MonoBehaviour
     public GameObject display3;
 
 
-    Mat frame = new Mat();
+    static Mat frame = new Mat();
     Mat canny = new Mat();
     Mat threshold_output = new Mat();
     Mat fgMaskMOG2 = new Mat();
     Mat img1 = new Mat();
-    Mat img2 = new Mat(); 
+    Mat img2 = new Mat();
 
 
     char asl_letter;
@@ -42,8 +42,8 @@ public class ComputerCamera : MonoBehaviour
     int SAMPLE_RATE = 1;
 
     OpenCvSharp.Point[][] letters = new OpenCvSharp.Point[26][];
-    
-   /* OpenCvSharp.Point[][] letters;*/
+
+    /* OpenCvSharp.Point[][] letters;*/
     OpenCvSharp.Point[][] feature_image;
     OpenCvSharp.Point[][] contours;
     OpenCvSharp.HierarchyIndex[] hierarchy;
@@ -64,29 +64,32 @@ public class ComputerCamera : MonoBehaviour
     void Start()
     {
         WebCamDevice[] devices = WebCamTexture.devices;
-            if (webcam1 == null)
-                webcam1 = new WebCamTexture(devices[0].name);
-            if (!webcam1.isPlaying)
-                webcam1.Play();
-            webcam1.requestedFPS = 30;
-        for (int i = 0; i < devices.Length; i++)
-        {
-  /*          Debug.Log(devices[i].name);*/
-        }
-    
+        if (webcam1 == null)
+            webcam1 = new WebCamTexture(devices[0].name);
+        if (!webcam1.isPlaying)
+            webcam1.Play();
+        webcam1.requestedFPS = 30;
+
+        /*   for (int i = 0; i < devices.Length; i++)
+           {
+              Debug.Log(devices[i].name);*//*
+           }*/
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
         GetComponent<Renderer>().material.mainTexture = webcam1;
         frame = OpenCvSharp.Unity.TextureToMat(webcam1);
-        load_ASL();
+/*        load_ASL();*/
         predict(frame);
 
     }
+     public static Mat getCamera(){
 
+        return frame;
+    } 
     void load_ASL()
     {
 
@@ -95,8 +98,7 @@ public class ComputerCamera : MonoBehaviour
 
         foreach (var image in buffer)
         {
-
-            img1 = OpenCvSharp.Unity.TextureToMat((Texture2D)buffer[i]);
+            img1 = OpenCvSharp.Unity.TextureToMat(duplicateTexture((Texture2D)buffer[i]));
 
             Cv2.CvtColor(img1, img2, ColorConversionCodes.RGB2GRAY);
 
@@ -272,9 +274,30 @@ public class ComputerCamera : MonoBehaviour
                     maxDist += min;
                 }
                 return maxDist;
-            } /* end of distance_2()*/
+     } /* end of distance_2()*/
 
-~ComputerCamera() {
+    static public Texture2D duplicateTexture(Texture2D source)
+    {
+        RenderTexture renderTex = RenderTexture.GetTemporary(
+                    source.width,
+                    source.height,
+                    0,
+                    RenderTextureFormat.Default,
+                    RenderTextureReadWrite.Linear);
+
+        Graphics.Blit(source, renderTex);
+        RenderTexture previous = RenderTexture.active;
+        RenderTexture.active = renderTex;
+        Texture2D readableText = new Texture2D(source.width, source.height);
+        readableText.ReadPixels(new UnityEngine.Rect(0, 0, renderTex.width, renderTex.height), 0, 0);
+        readableText.Apply();
+        RenderTexture.active = previous;
+        RenderTexture.ReleaseTemporary(renderTex);
+        return readableText;
+    }
+
+
+    ~Predict_Script() {
 
         frame.Dispose();
         frame.Release();

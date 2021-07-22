@@ -4,7 +4,7 @@ using UnityEngine;
 using OpenCvSharp;
 using System.IO;
 
-public class TrainData : MonoBehaviour
+public class Train_Script : MonoBehaviour
 {
     Mat frame = new Mat();
     Mat canny = new Mat();
@@ -13,8 +13,15 @@ public class TrainData : MonoBehaviour
     OpenCvSharp.HierarchyIndex[] trainHierarchy;
 
     int THRESH = 200;
+    int maxIndex = 0;
 
     static Texture2D  image;
+    static Texture2D tex1;
+    static Texture2D tex2;
+
+
+    public GameObject Train_display1;
+    public GameObject Train_display2;
 
     static WebCamTexture webcam1;
 
@@ -27,27 +34,38 @@ public class TrainData : MonoBehaviour
         if (!webcam1.isPlaying)
             webcam1.Play();
         webcam1.requestedFPS = 30;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-    /*    GetComponent<Renderer>().material.mainTexture = webcam1;*/
+      /*  GetComponent<Renderer>().material.mainTexture = webcam1;*/
         frame = OpenCvSharp.Unity.TextureToMat(webcam1);
         Train(frame);
 
     }
     void Train(Mat frame)
     {
-/*        frame = OpenCvSharp.Unity.TextureToMat(webcam1);*/
+/*      frame = OpenCvSharp.Unity.TextureToMat(webcam1);*/
 
         OpenCvSharp.Rect myROI = new OpenCvSharp.Rect(200, 200, 200, 200);
         
         Mat cropFrame = frame[myROI];
-        Cv2.ImShow("Crop Frame", cropFrame);
+
+        tex1 = OpenCvSharp.Unity.MatToTexture(cropFrame);
+
+        Train_display1.GetComponent<Renderer>().material.mainTexture = tex1;
+
+        Cv2.ImShow("Train Crop Frame", cropFrame);
 
         Cv2.Canny(cropFrame, canny, 50, 200);
-        Cv2.ImShow("canny", canny);
+
+        Cv2.ImShow("Train canny", canny);
+        tex2 = OpenCvSharp.Unity.MatToTexture(canny);
+
+        Train_display2.GetComponent<Renderer>().material.mainTexture = tex2;
+
         Cv2.Threshold(canny, threshHoldoutput, THRESH, 255, ThresholdTypes.Binary);
         
         Cv2.FindContours(threshHoldoutput, out featureImage, out trainHierarchy, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, new Point(0, 0));
@@ -60,37 +78,50 @@ public class TrainData : MonoBehaviour
             if (area > largest_area)
             {
                 largest_area = area;
-                ComputerCamera.maxIndex = j; // Store the index of largest contour
+                maxIndex = j; // Store the index of largest contour
             }
         }
 
         // creates Mat of Zeros = Black frame to draw on 
         Mat contourImg = Mat.Zeros(cropFrame.Size(), MatType.CV_8UC(3));
         // Draw Contours         
-        Cv2.DrawContours(contourImg, featureImage, ComputerCamera.maxIndex, new Scalar(0, 0, 255), 2, LineTypes.Link8, trainHierarchy, 0, new Point(0, 0));
+        Cv2.DrawContours(contourImg, featureImage, maxIndex, new Scalar(0, 0, 255), 2, LineTypes.Link8, trainHierarchy, 0, new Point(0, 0));
 
-        Cv2.ImShow("Countour Img", contourImg);
-        
-        string key = Input.inputString;
+        /*        Cv2.ImShow("Train Img", contourImg);*/
 
-        char character = key.ToCharArray()[0];
-        
-        if (character >= 'a' || character <= 'z') {
+        if (Input.anyKey || !Input.)
+        {
+            int minimumKey = (int)KeyCode.A;
+            int maximumKey = (int)KeyCode.Z;
+            int i = minimumKey;
 
-            int keyIndex = 0 + character - 'a';
-  
-            image = OpenCvSharp.Unity.MatToTexture(canny);
+            var character = ' ';
 
-            byte[] Bytes = image.EncodeToPNG();
-           
-            File.WriteAllBytes(Application.dataPath + "/Resources/Train/" + keyIndex + ".png", Bytes);
+            for (int j = i; j <= maximumKey; j++)
+            {
+                if (Input.GetKeyDown((KeyCode)j))
+                {
+
+                    character = (char)(KeyCode)j;
+                }
+            }
+
+            if (character >= 'A' || character <= 'Z')
+            {
+                Debug.Log("Char is: -----------> " + character);
+
+                image = OpenCvSharp.Unity.MatToTexture(canny);
+
+                byte[] Bytes = image.EncodeToPNG();
+
+                File.WriteAllBytes(Application.dataPath + "/Resources/Train/" + character + ".png", Bytes);
+            }
         }
     }
-    ~TrainData()
+    ~Train_Script()
     {
-
-        frame.Dispose();
-        frame.Release();
+/*        frame.Dispose();
+        frame.Release();*/
         Cv2.DestroyAllWindows();
     }
 }
