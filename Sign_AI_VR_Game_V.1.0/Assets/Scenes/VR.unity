@@ -748,6 +748,7 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   active: 0
 --- !u!114 &21361685
 MonoBehaviour:
@@ -767,7 +768,11 @@ MonoBehaviour:
     content: Level 2 unlocked
     postProcess: 0
     translationID: 0
-  color: {r: 0.49803925, g: 0.49411768, b: 0.9607844, a: 1}
+  color:
+    r: 0.49803925
+    g: 0.49411768
+    b: 0.9607844
+    a: 1
   time: 1
   target:
     target: 3
@@ -788,7 +793,9 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   offset: {x: 0, y: 0, z: 2}
+  forceStop: 0
 --- !u!114 &21361686
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -807,7 +814,11 @@ MonoBehaviour:
     content: Good job!  Don't forget to always wash your hands!
     postProcess: 0
     translationID: 0
-  color: {r: 0.49841577, g: 0.49474904, b: 0.9622642, a: 1}
+  color:
+    r: 0.49841577
+    g: 0.49474904
+    b: 0.9622642
+    a: 1
   time: 5
   target:
     target: 3
@@ -828,7 +839,9 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   offset: {x: 0, y: 0, z: 2}
+  forceStop: 0
 --- !u!114 &21361687
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -850,6 +863,7 @@ MonoBehaviour:
   - {fileID: 21361691}
   executingIndex: -1
   isExecuting: 0
+  cancelExecution: 0
 --- !u!114 &21361688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,14 +876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentID: 0
-  instanceID: 0
-  actionsList: {fileID: 21361687}
-  runInBackground: 1
-  destroyAfterFinishing: 1
-  onFinish:
-    m_PersistentCalls:
-      m_Calls: []
+  fileID: 0
 --- !u!114 &21361689
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -902,6 +909,7 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   active: 1
 --- !u!114 &21361690
 MonoBehaviour:
@@ -935,6 +943,7 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   active: 0
 --- !u!114 &21361691
 MonoBehaviour:
@@ -968,6 +977,7 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   active: 1
 --- !u!1 &23175705
 GameObject:
@@ -2994,10 +3004,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 242384025}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -3023,6 +3041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -3077,10 +3096,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -3091,7 +3115,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &79809461
 GameObject:
   m_ObjectHideFlags: 0
@@ -3714,10 +3745,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 955408647}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -3743,6 +3782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -3797,10 +3837,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -3811,7 +3856,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &102126778
 GameObject:
   m_ObjectHideFlags: 0
@@ -7592,6 +7644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 224062513}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -8123,10 +8176,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1737246836}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -8152,6 +8213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -8206,10 +8268,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -8220,7 +8287,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &236956937
 GameObject:
   m_ObjectHideFlags: 0
@@ -8888,10 +8962,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1826229929}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -8917,6 +8999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -8971,10 +9054,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -8985,7 +9073,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &255187749
 GameObject:
   m_ObjectHideFlags: 0
@@ -11198,6 +11293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 318867241}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -12342,10 +12438,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1982233894}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -12371,6 +12475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -12425,10 +12530,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -12439,7 +12549,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &343170240
 GameObject:
   m_ObjectHideFlags: 0
@@ -12723,10 +12840,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1938885396}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -12752,6 +12877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -12806,10 +12932,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -12820,7 +12951,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &355251398
 GameObject:
   m_ObjectHideFlags: 0
@@ -12992,6 +13130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 358375658}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -13463,6 +13602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 367640658}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -14075,6 +14215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 381063634}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -17977,10 +18118,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 305329547}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -18006,6 +18155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -18060,10 +18210,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -18074,7 +18229,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &494042327
 GameObject:
   m_ObjectHideFlags: 0
@@ -20022,14 +20184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentID: 0
-  instanceID: 0
-  actionsList: {fileID: 546635618}
-  runInBackground: 1
-  destroyAfterFinishing: 0
-  onFinish:
-    m_PersistentCalls:
-      m_Calls: []
+  fileID: 0
 --- !u!114 &546635618
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -20047,6 +20202,7 @@ MonoBehaviour:
   - {fileID: 546635621}
   executingIndex: -1
   isExecuting: 0
+  cancelExecution: 0
 --- !u!114 &546635619
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -20079,6 +20235,7 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   active: 0
 --- !u!4 &546635620
 Transform:
@@ -20126,6 +20283,7 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   active: 0
 --- !u!1 &546743830
 GameObject:
@@ -21414,7 +21572,6 @@ GameObject:
   - component: {fileID: 586447868}
   - component: {fileID: 586447872}
   - component: {fileID: 586447871}
-  - component: {fileID: 586447870}
   - component: {fileID: 586447869}
   m_Layer: 0
   m_Name: Map Pre Level 2
@@ -21431,7 +21588,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586447867}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.57, y: -4.400326, z: 2.2269135}
+  m_LocalPosition: {x: 30.93, y: -4.400326, z: 2.2269135}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1487485263}
@@ -21457,18 +21614,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1790178835}
---- !u!114 &586447870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586447867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &586447871
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22832,6 +22977,7 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   active: 0
 --- !u!114 &641667196
 MonoBehaviour:
@@ -22850,6 +22996,7 @@ MonoBehaviour:
   - {fileID: 641667198}
   executingIndex: -1
   isExecuting: 0
+  cancelExecution: 0
 --- !u!114 &641667197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22862,14 +23009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentID: 0
-  instanceID: 0
-  actionsList: {fileID: 641667196}
-  runInBackground: 1
-  destroyAfterFinishing: 0
-  onFinish:
-    m_PersistentCalls:
-      m_Calls: []
+  fileID: 0
 --- !u!114 &641667198
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -22888,7 +23028,11 @@ MonoBehaviour:
     content: Level 1
     postProcess: 0
     translationID: 0
-  color: {r: 0.504717, g: 0.6096005, b: 1, a: 1}
+  color:
+    r: 0.504717
+    g: 0.6096005
+    b: 1
+    a: 1
   time: 2
   target:
     target: 3
@@ -22909,7 +23053,9 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   offset: {x: 0, y: 0, z: 2}
+  forceStop: 0
 --- !u!1 &642110504
 GameObject:
   m_ObjectHideFlags: 0
@@ -26421,6 +26567,7 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   active: 0
 --- !u!114 &747494446
 MonoBehaviour:
@@ -26439,6 +26586,7 @@ MonoBehaviour:
   - {fileID: 747494445}
   executingIndex: -1
   isExecuting: 0
+  cancelExecution: 0
 --- !u!114 &747494447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26451,14 +26599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentID: 0
-  instanceID: 0
-  actionsList: {fileID: 747494446}
-  runInBackground: 1
-  destroyAfterFinishing: 1
-  onFinish:
-    m_PersistentCalls:
-      m_Calls: []
+  fileID: 0
 --- !u!114 &747494448
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -29629,7 +29770,11 @@ MonoBehaviour:
     content: Medicine Pill
     postProcess: 0
     translationID: 0
-  color: {r: 0.26842916, g: 1, b: 0, a: 1}
+  color:
+    r: 0.26842916
+    g: 1
+    b: 0
+    a: 1
   time: 5
   target:
     target: 3
@@ -29650,7 +29795,9 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   offset: {x: 0, y: 2, z: 0}
+  forceStop: 0
 --- !u!114 &819058391
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -29667,6 +29814,7 @@ MonoBehaviour:
   - {fileID: 819058390}
   executingIndex: -1
   isExecuting: 0
+  cancelExecution: 0
 --- !u!114 &819058392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29679,14 +29827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentID: 0
-  instanceID: 0
-  actionsList: {fileID: 819058391}
-  runInBackground: 1
-  destroyAfterFinishing: 0
-  onFinish:
-    m_PersistentCalls:
-      m_Calls: []
+  fileID: 0
 --- !u!1 &819584550
 GameObject:
   m_ObjectHideFlags: 0
@@ -30181,6 +30322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 837583619}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -33480,6 +33622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 940356571}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -33994,10 +34137,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1746532053}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -34023,6 +34174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -34077,10 +34229,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -34091,7 +34248,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &945373293
 GameObject:
   m_ObjectHideFlags: 0
@@ -36834,6 +36998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1015548591}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -37541,9 +37706,11 @@ MonoBehaviour:
   onCheckConditions:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   onExecuteActions:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
 --- !u!114 &1024260932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37562,6 +37729,7 @@ MonoBehaviour:
   onInteract:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
 --- !u!1 &1027581276
 GameObject:
   m_ObjectHideFlags: 0
@@ -38797,7 +38965,11 @@ MonoBehaviour:
     content: 'This level consist in you to pass quiz in your left side '
     postProcess: 0
     translationID: 0
-  color: {r: 0.4575472, g: 0.5405106, b: 1, a: 1}
+  color:
+    r: 0.4575472
+    g: 0.5405106
+    b: 1
+    a: 1
   time: 5
   target:
     target: 3
@@ -38818,7 +38990,9 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   offset: {x: 0, y: 0, z: 2}
+  forceStop: 0
 --- !u!114 &1064387153
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -38836,6 +39010,7 @@ MonoBehaviour:
   - {fileID: 1064387155}
   executingIndex: -1
   isExecuting: 0
+  cancelExecution: 0
 --- !u!114 &1064387154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38848,14 +39023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentID: 0
-  instanceID: 0
-  actionsList: {fileID: 1064387153}
-  runInBackground: 1
-  destroyAfterFinishing: 1
-  onFinish:
-    m_PersistentCalls:
-      m_Calls: []
+  fileID: 0
 --- !u!114 &1064387155
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -38875,7 +39043,11 @@ MonoBehaviour:
       room
     postProcess: 0
     translationID: 0
-  color: {r: 0.5613208, g: 0.6132462, b: 1, a: 1}
+  color:
+    r: 0.5613208
+    g: 0.6132462
+    b: 1
+    a: 1
   time: 5
   target:
     target: 3
@@ -38896,7 +39068,9 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   offset: {x: 0, y: 0, z: 2}
+  forceStop: 0
 --- !u!1 &1066106574
 GameObject:
   m_ObjectHideFlags: 0
@@ -39688,6 +39862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1106861972}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -40503,6 +40678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1143036015}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -41876,6 +42052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1183769882}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -43215,7 +43392,11 @@ MonoBehaviour:
     content: Correct! Next Level unlocked
     postProcess: 0
     translationID: 0
-  color: {r: 0.59406215, g: 0.5518868, b: 1, a: 1}
+  color:
+    r: 0.59406215
+    g: 0.5518868
+    b: 1
+    a: 1
   time: 5
   target:
     target: 3
@@ -43236,7 +43417,9 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   offset: {x: 0, y: 0, z: 2}
+  forceStop: 0
 --- !u!114 &1226595584
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -43255,6 +43438,7 @@ MonoBehaviour:
   - {fileID: 1226595587}
   executingIndex: -1
   isExecuting: 0
+  cancelExecution: 0
 --- !u!114 &1226595585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43267,14 +43451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentID: 0
-  instanceID: 0
-  actionsList: {fileID: 1226595584}
-  runInBackground: 1
-  destroyAfterFinishing: 0
-  onFinish:
-    m_PersistentCalls:
-      m_Calls: []
+  fileID: 0
 --- !u!114 &1226595587
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -43307,6 +43484,7 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   active: 1
 --- !u!114 &1226595588
 MonoBehaviour:
@@ -43340,6 +43518,7 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   active: 1
 --- !u!1 &1226773866
 GameObject:
@@ -43419,6 +43598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1228696451}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -45248,6 +45428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1278873302}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -46507,6 +46688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1330580616}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -48315,10 +48497,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2111836932}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -48344,6 +48534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -48398,10 +48589,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -48412,7 +48608,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1390729950
 GameObject:
   m_ObjectHideFlags: 0
@@ -48870,10 +49073,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 46369814}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -48899,6 +49110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -48953,10 +49165,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -48967,7 +49184,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1409160857
 GameObject:
   m_ObjectHideFlags: 0
@@ -51334,9 +51558,13 @@ MonoBehaviour:
       targetObject: {fileID: 0}
       select: 1
       index: 0
+    cacheInstanceID: 0
+    cacheCharacterID: 0
+    cacheCharacter: {fileID: 0}
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   action: 0
   bone: 9
   instance:
@@ -51358,6 +51586,7 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   space: 1
   position: {x: 0, y: 0.12, z: 0}
   rotation: {x: 0, y: -95, z: 0}
@@ -51377,6 +51606,7 @@ MonoBehaviour:
   - {fileID: 1473410976}
   executingIndex: -1
   isExecuting: 0
+  cancelExecution: 0
 --- !u!114 &1473410978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51389,14 +51619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentID: 0
-  instanceID: 0
-  actionsList: {fileID: 1473410977}
-  runInBackground: 1
-  destroyAfterFinishing: 0
-  onFinish:
-    m_PersistentCalls:
-      m_Calls: []
+  fileID: 0
 --- !u!1 &1473826537
 GameObject:
   m_ObjectHideFlags: 0
@@ -52628,10 +52851,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 528982909}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -52657,6 +52888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -52711,10 +52943,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -52725,7 +52962,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1493312984
 GameObject:
   m_ObjectHideFlags: 0
@@ -53447,7 +53691,11 @@ MonoBehaviour:
     content: You need make distance from each other!
     postProcess: 0
     translationID: 0
-  color: {r: 0.44938955, g: 0.4292453, b: 1, a: 1}
+  color:
+    r: 0.44938955
+    g: 0.4292453
+    b: 1
+    a: 1
   time: 4
   target:
     target: 3
@@ -53468,7 +53716,9 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   offset: {x: 0, y: 0, z: 2}
+  forceStop: 0
 --- !u!114 &1517570802
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -53485,6 +53735,7 @@ MonoBehaviour:
   - {fileID: 1517570801}
   executingIndex: -1
   isExecuting: 0
+  cancelExecution: 0
 --- !u!114 &1517570803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53497,14 +53748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentID: 0
-  instanceID: 0
-  actionsList: {fileID: 1517570802}
-  runInBackground: 1
-  destroyAfterFinishing: 0
-  onFinish:
-    m_PersistentCalls:
-      m_Calls: []
+  fileID: 0
 --- !u!1 &1518507631
 GameObject:
   m_ObjectHideFlags: 0
@@ -54431,6 +54675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1545273227}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -55097,7 +55342,11 @@ MonoBehaviour:
       box to open the room
     postProcess: 0
     translationID: 0
-  color: {r: 0.4431373, g: 0.4666667, b: 1, a: 1}
+  color:
+    r: 0.4431373
+    g: 0.4666667
+    b: 1
+    a: 1
   time: 5
   target:
     target: 3
@@ -55118,7 +55367,9 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   offset: {x: 0, y: 0, z: 2}
+  forceStop: 0
 --- !u!114 &1568367712
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -55136,6 +55387,7 @@ MonoBehaviour:
   - {fileID: 1568367714}
   executingIndex: -1
   isExecuting: 0
+  cancelExecution: 0
 --- !u!114 &1568367713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55148,14 +55400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentID: 0
-  instanceID: 0
-  actionsList: {fileID: 1568367712}
-  runInBackground: 1
-  destroyAfterFinishing: 1
-  onFinish:
-    m_PersistentCalls:
-      m_Calls: []
+  fileID: 0
 --- !u!114 &1568367714
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -55174,7 +55419,11 @@ MonoBehaviour:
     content: Don't forget to make social distance
     postProcess: 0
     translationID: 0
-  color: {r: 0.43867922, g: 0.46729568, b: 1, a: 1}
+  color:
+    r: 0.43867922
+    g: 0.46729568
+    b: 1
+    a: 1
   time: 4
   target:
     target: 3
@@ -55195,7 +55444,9 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   offset: {x: 0, y: 0, z: 2}
+  forceStop: 0
 --- !u!1 &1572453762
 GameObject:
   m_ObjectHideFlags: 0
@@ -55754,10 +56005,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 176804508}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -55783,6 +56042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -55837,10 +56097,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -55851,7 +56116,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1592455779
 GameObject:
   m_ObjectHideFlags: 0
@@ -56072,10 +56344,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1857351534}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -56101,6 +56381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -56155,10 +56436,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -56169,7 +56455,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1596560820
 GameObject:
   m_ObjectHideFlags: 0
@@ -56249,6 +56542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1597412803}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -60246,7 +60540,11 @@ MonoBehaviour:
     content: Thank you!
     postProcess: 0
     translationID: 0
-  color: {r: 0.19122791, g: 1, b: 0, a: 1}
+  color:
+    r: 0.19122791
+    g: 1
+    b: 0
+    a: 1
   time: 5
   target:
     target: 3
@@ -60267,7 +60565,9 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   offset: {x: 0, y: 2, z: 0}
+  forceStop: 0
 --- !u!114 &1698980532
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -60284,6 +60584,7 @@ MonoBehaviour:
   - {fileID: 1698980530}
   executingIndex: -1
   isExecuting: 0
+  cancelExecution: 0
 --- !u!114 &1698980533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60296,14 +60597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentID: 0
-  instanceID: 0
-  actionsList: {fileID: 1698980532}
-  runInBackground: 1
-  destroyAfterFinishing: 0
-  onFinish:
-    m_PersistentCalls:
-      m_Calls: []
+  fileID: 0
 --- !u!1 &1699958513
 GameObject:
   m_ObjectHideFlags: 0
@@ -61746,10 +62040,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 92051224}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -61775,6 +62077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -61829,10 +62132,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -61843,7 +62151,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1752347684
 GameObject:
   m_ObjectHideFlags: 0
@@ -64228,10 +64543,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1352028187}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -64257,6 +64580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -64311,10 +64635,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -64325,7 +64654,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1810079937
 GameObject:
   m_ObjectHideFlags: 0
@@ -69908,10 +70244,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 339888085}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -69937,6 +70281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -69991,10 +70336,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -70005,7 +70355,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1979605315
 GameObject:
   m_ObjectHideFlags: 0
@@ -70537,6 +70894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 2004660168}
+  isExitingApplication: 0
   objectWithTag: Player
   storeSelf:
     variableType: 0
@@ -70893,10 +71251,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 57473970}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -70922,6 +71288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -70976,10 +71343,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -70990,7 +71362,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &2008459596
 GameObject:
   m_ObjectHideFlags: 0
@@ -71956,14 +72335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentID: 0
-  instanceID: 0
-  actionsList: {fileID: 2034171668}
-  runInBackground: 1
-  destroyAfterFinishing: 0
-  onFinish:
-    m_PersistentCalls:
-      m_Calls: []
+  fileID: 0
 --- !u!114 &2034171668
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -71980,6 +72352,7 @@ MonoBehaviour:
   - {fileID: 2034171669}
   executingIndex: -1
   isExecuting: 0
+  cancelExecution: 0
 --- !u!114 &2034171669
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -71998,7 +72371,11 @@ MonoBehaviour:
     content: Incorrect! Try again
     postProcess: 0
     translationID: 0
-  color: {r: 1, g: 0.33490568, b: 0.33490568, a: 1}
+  color:
+    r: 1
+    g: 0.33490568
+    b: 0.33490568
+    a: 1
   time: 5
   target:
     target: 3
@@ -72019,7 +72396,9 @@ MonoBehaviour:
     eventChangeVariable:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   offset: {x: 0, y: 0, z: 2}
+  forceStop: 0
 --- !u!4 &2034171670
 Transform:
   m_ObjectHideFlags: 0
@@ -74963,10 +75342,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 801497409}
+  character: {fileID: 0}
   defaultState: {fileID: 0}
+  animEvents: {fileID: 0}
+  characterAttachments: {fileID: 0}
+  characterRotation: {}
+  headTrack: {fileID: 0}
+  footIK: {fileID: 0}
+  handIK: {fileID: 0}
+  stiffBody: 0
+  rotationVelocity: 0
   useFootIK: 1
   footLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967291
   useHandIK: 1
   useSmartHeadIK: 1
@@ -74992,6 +75379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
+  exitingApplication: 0
   characterLocomotion:
     isControllable: 1
     isBusy: 0
@@ -75046,10 +75434,15 @@ MonoBehaviour:
         select: 1
         index: 0
     canUseNavigationMesh: 0
+    lastGroundTime: 0
+    lastJumpTime: 0
+    jumpChain: 0
     character: {fileID: 0}
     animatorConstraint: 0
     characterController: {fileID: 0}
     navmeshAgent: {fileID: 0}
+    <currentLocomotionType>k__BackingField: 0
+    useGravity: 1
   characterState:
     forwardSpeed: {x: 0, y: 0, z: 0}
     sidesSpeed: 0
@@ -75060,7 +75453,14 @@ MonoBehaviour:
     isDashing: 0
     verticalSpeed: 0
     normal: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
+  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
+    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
+    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
   save: 0
+  initSaveData:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &2120079842
 GameObject:
   m_ObjectHideFlags: 0
