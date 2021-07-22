@@ -89,7 +89,7 @@ public class Train_Script : MonoBehaviour
 
         /*        Cv2.ImShow("Train Img", contourImg);*/
 
-        if (Input.anyKey || !Input.)
+        if (Input.anyKey && !(Input.GetMouseButton(0) || Input.GetMouseButton(1)))
         {
             int minimumKey = (int)KeyCode.A;
             int maximumKey = (int)KeyCode.Z;
