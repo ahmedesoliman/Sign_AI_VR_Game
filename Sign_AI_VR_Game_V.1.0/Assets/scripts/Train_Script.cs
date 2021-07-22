@@ -89,32 +89,33 @@ public class Train_Script : MonoBehaviour
 
         /*        Cv2.ImShow("Train Img", contourImg);*/
 
-        if (Input.anyKey && !(Input.GetMouseButton(0) || Input.GetMouseButton(1)))
+        if (Input.anyKey && !(Input.GetMouseButton(0) || Input.GetMouseButton(1)) && !(Input.GetKeyDown(KeyCode.LeftAlt) || Input.GetKeyDown(KeyCode.RightAlt)))
         {
             int minimumKey = (int)KeyCode.A;
             int maximumKey = (int)KeyCode.Z;
             int i = minimumKey;
 
-            var character = ' ';
 
             for (int j = i; j <= maximumKey; j++)
             {
+
+                var character = ' ';
                 if (Input.GetKeyDown((KeyCode)j))
                 {
 
                     character = (char)(KeyCode)j;
                 }
-            }
 
-            if (character >= 'A' || character <= 'Z')
-            {
-                Debug.Log("Char is: -----------> " + character);
+                if (character >= 'A' || character <= 'Z' && character != ' ')
+                {
+                    Debug.Log("Char is: -----------> " + character);
 
-                image = OpenCvSharp.Unity.MatToTexture(canny);
+                    image = OpenCvSharp.Unity.MatToTexture(canny);
 
-                byte[] Bytes = image.EncodeToPNG();
+                    byte[] Bytes = image.EncodeToPNG();
 
-                File.WriteAllBytes(Application.dataPath + "/Resources/Train/" + character + ".png", Bytes);
+                    File.WriteAllBytes(Application.dataPath + "/Resources/Train/" + character + ".png", Bytes);
+                }
             }
         }
     }

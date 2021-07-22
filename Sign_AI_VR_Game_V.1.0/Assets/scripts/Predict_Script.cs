@@ -33,7 +33,7 @@ public class Predict_Script : MonoBehaviour
 
 
     char asl_letter;
-    int DIFF_THRESH = 230;
+    int DIFF_THRESH = 250;
     double THRESH = 200;
     public static int maxIndex = 0;
     int MAX_LETTERS = 26;
@@ -82,7 +82,7 @@ public class Predict_Script : MonoBehaviour
     {
         GetComponent<Renderer>().material.mainTexture = webcam1;
         frame = OpenCvSharp.Unity.TextureToMat(webcam1);
-/*        load_ASL();*/
+        load_ASL();
         predict(frame);
 
     }
@@ -177,7 +177,7 @@ public class Predict_Script : MonoBehaviour
         // creates Mat of Zeros = Black frame to draw on 
         Mat contourImg = Mat.Zeros(cropFrame.Size(), MatType.CV_8UC(3));
         // Draw Contours         
-        Cv2.DrawContours(contourImg, feature_image, maxIndex, new Scalar(0, 0, 255), 2, LineTypes.Link8, hierarchy, 0, new Point(0, 0));
+        Cv2.DrawContours(contourImg, feature_image, maxIndex, new Scalar(0, 0, 255), 2, LineTypes.Filled, hierarchy, 0, new Point(0, 0));
 
         tex3 = OpenCvSharp.Unity.MatToTexture(contourImg);
 
@@ -213,8 +213,6 @@ public class Predict_Script : MonoBehaviour
 
                 for (int i = 0; i < MAX_LETTERS; i++)
                 {
-                    /*                    if (letters[i].Length == 0)
-                                            continue;*/
                     double difference = distance(letters[i], feature_image[maxIndex]);
 
 
@@ -245,7 +243,7 @@ public class Predict_Script : MonoBehaviour
 
                 int maxDist = Math.Max(maxDistAB, maxDistBA);
 
-                return Math.Sqrt((double)maxDist);
+                return Math.Sqrt(maxDist);
     }
     int distance_2(Point[] a, Point[] b)
             {
