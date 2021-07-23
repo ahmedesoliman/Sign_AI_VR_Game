@@ -19,7 +19,6 @@ public class Train_Script : MonoBehaviour
     static Texture2D tex1;
     static Texture2D tex2;
 
-
     public GameObject Train_display1;
     public GameObject Train_display2;
 
@@ -121,7 +120,7 @@ public class Train_Script : MonoBehaviour
     }
     ~Train_Script()
     {
-/*        frame.Dispose();
+/*      frame.Dispose();
         frame.Release();*/
         Cv2.DestroyAllWindows();
     }
