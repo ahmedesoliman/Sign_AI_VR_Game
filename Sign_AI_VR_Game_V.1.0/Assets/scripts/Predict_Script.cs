@@ -69,12 +69,13 @@ public class Predict_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        WebCamDevice[] devices = WebCamTexture.devices;
-        if (webcam1 == null)
-            webcam1 = new WebCamTexture(devices[0].name);
-        if (!webcam1.isPlaying)
-            webcam1.Play();
-        webcam1.requestedFPS = 30;
+        //WebCamDevice[] devices = WebCamTexture.devices;
+        //if (webcam1 == null)
+        //    webcam1 = new WebCamTexture(devices[0].name);
+        //if (!webcam1.isPlaying)
+        //    webcam1.Play();
+        //webcam1.requestedFPS = 30;
+        webcam1 = CameraScript.getWebCamTexture();
         
         load_ASL();
 
