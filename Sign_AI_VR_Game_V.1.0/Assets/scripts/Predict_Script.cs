@@ -27,6 +27,7 @@ public class Predict_Script : MonoBehaviour
     static Mat frame = new Mat();
     Mat canny = new Mat();
     Mat threshold_output = new Mat();
+    Mat threshold_Load = new Mat();
     Mat fgMaskMOG2 = new Mat();
     Mat img1 = new Mat();
     Mat img2 = new Mat();
@@ -34,6 +35,7 @@ public class Predict_Script : MonoBehaviour
 
     char asl_letter;
     int DIFF_THRESH = 230;
+    int Diff_MAX = 360;
     double THRESH = 200;
     public static int maxIndex = 0;
     int MAX_LETTERS = 26;
@@ -48,6 +50,7 @@ public class Predict_Script : MonoBehaviour
     /* OpenCvSharp.Point[][] letters;*/
     OpenCvSharp.Point[][] feature_image;
     OpenCvSharp.Point[][] contours;
+
     OpenCvSharp.HierarchyIndex[] hierarchy;
     OpenCvSharp.HierarchyIndex[] hierarchy1;
 
@@ -72,11 +75,8 @@ public class Predict_Script : MonoBehaviour
         if (!webcam1.isPlaying)
             webcam1.Play();
         webcam1.requestedFPS = 30;
-
-        /*   for (int i = 0; i < devices.Length; i++)
-           {
-              Debug.Log(devices[i].name);*//*
-           }*/
+        
+        load_ASL();
 
     }
 
@@ -85,7 +85,7 @@ public class Predict_Script : MonoBehaviour
     {
         GetComponent<Renderer>().material.mainTexture = webcam1;
         frame = OpenCvSharp.Unity.TextureToMat(webcam1);
-        load_ASL();
+
         predict(frame);
 
     }
@@ -96,7 +96,7 @@ public class Predict_Script : MonoBehaviour
     void load_ASL()
     {
 
-        buffer = Resources.LoadAll("Alpha", typeof(Texture2D));
+        buffer = Resources.LoadAll("Train", typeof(Texture2D));
         int i = 0;
 
         foreach (var image in buffer)
@@ -107,18 +107,20 @@ public class Predict_Script : MonoBehaviour
 
             // Detect edges using Threshold
             //The threshold method returns two outputs. The first is the threshold that was used and the second output is the thresholded image.
-            Cv2.Threshold(img2, threshold_output, THRESH, 255, ThresholdTypes.Binary);
+            Cv2.Threshold(img2, threshold_Load, THRESH, 255, ThresholdTypes.Binary);
 
             //findcontours() function retrieves contours from the binary image using the openCV algorithm[193].
             //The contours are a useful tool for shape analysisand object and detectionand recognition.
-            Cv2.FindContours(threshold_output, out contours, out hierarchy1, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, new Point(0, 0));
+            
+            Cv2.FindContours(threshold_Load, out contours, out hierarchy1, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, new Point(0, 0));
 
             letters[i] = contours[0];
+
             //contours returns a vector<vector<point>>
             i++;
         }
-
-/*        var backGroundMOG2 = BackgroundSubtractorMOG2.Create(2000, 20, true);*/
+        Debug.Log("End of for each loop");
+        var ptrBackgroundMOG2 = BackgroundSubtractorMOG2.Create(10000, 200, false);
     }
 
     void predict(Mat frame)
@@ -129,7 +131,7 @@ public class Predict_Script : MonoBehaviour
         frame = OpenCvSharp.Unity.TextureToMat(webcam1);
 
         //Creates MOG2 Background Subtractor.
-/*        backgroundMOG2 =  BackgroundSubtractorMOG2.Create();*/
+        var ptrBackgroundMOG2 = BackgroundSubtractorMOG2.Create(10000, 200, false);
 
         // Crop Frame to smaller region using the rectangle of interest method
 
@@ -148,31 +150,21 @@ public class Predict_Script : MonoBehaviour
         Mat dialtedst = new Mat();
         Mat erodedst = new Mat();
         Mat element = new Mat();
+        Mat outputPoly = new Mat();
 
         Cv2.Canny(cropFrame, canny, 50, 200);
 
         Cv2.ImShow("Canny", canny);
 
-
         // Update the background model
-        /*        backgroundMOG2.Apply(cropFrame, fgMaskMOG2, 1);*/
-        /*
-                Cv2.ImShow("Foregound Mask", fgMaskMOG2);*/
+        ptrBackgroundMOG2.Apply(cropFrame, fgMaskMOG2, 0);
+
+        Cv2.ImShow("Foregound Mask", fgMaskMOG2);
 
 
         // Detect edges using Threshold:/// Applies a fixed-level threshold to each array element.
 
         Cv2.Threshold(canny, threshold_output, THRESH, 255, ThresholdTypes.Binary);
-
-        Mat rectelement = Cv2.GetStructuringElement(MorphShapes.Rect, new Size(3, 3));
-
-        Cv2.Dilate(threshold_output, dialtedst, rectelement );
-
-        Cv2.ImShow("Dialte", dialtedst);
-
-        Cv2.Erode(dialtedst, erodedst, rectelement);
-
-        Cv2.ImShow("erode dst", erodedst);
 
         tex2 = OpenCvSharp.Unity.MatToTexture(canny);
 
@@ -180,16 +172,6 @@ public class Predict_Script : MonoBehaviour
 
         // Find contours
         Cv2.FindContours(threshold_output, out feature_image, out hierarchy, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, new Point(0, 0));
-/*
-        var contors = new OpenCvSharp.Point[]{};
-
-        if (feature_image.Length == 2)
-        {
-            contors = feature_image[0];
-        }
-        else contors = feature_image[1];
-
-        Mat big_contors = Math.Max(contors, contorsContourArea);*/
 
         double largest_area = 0;
 
@@ -213,7 +195,10 @@ public class Predict_Script : MonoBehaviour
         display3.GetComponent<Renderer>().material.mainTexture = tex3;
 
         Cv2.ImShow("Countour Img", contourImg);
+/*
+        Cv2.FillPoly(canny, , new Scalar(255, 255, 255), LineTypes.Filled);
 
+        Cv2.ImShow("Filled ", outputPoly);*/
 
         //Reset if too much noise
         /*    Scalar sums = sum(drawing1);
@@ -234,11 +219,10 @@ public class Predict_Script : MonoBehaviour
         //if (key == ' ')
         //backGroundMOG2 = createBackgroundSubtractorMOG2(10000, 200, false);
 
-        if (feature_image.Length > 0 && feature_image[maxIndex].Length >= 5)
+        if (feature_image.Length > 0 && frames++ > SAMPLE_RATE && feature_image[maxIndex].Length >= 5)
         {
-            {
-
-                double lowestDiff = double.MaxValue;
+             frames = 0;
+            double lowestDiff = double.PositiveInfinity;
 
                 for (int i = 0; i < MAX_LETTERS; i++)
                 {
@@ -252,20 +236,18 @@ public class Predict_Script : MonoBehaviour
                         lowestDiff = difference;
 
                         asl_letter = (char)(((int)'a') + i);
-                        Debug.Log("-------: " + lowestDiff + "I==> " + i);
                     }
                 }
 
-/*                if (lowestDiff > DIFF_THRESH)
+                if (lowestDiff < DIFF_THRESH || lowestDiff > Diff_MAX)
                 { // Reset if Dust
                     asl_letter = (char)(((int)0));
-                }*/
+                }
 
                 Debug.Log("The letter is: " + asl_letter + " | difference: " + lowestDiff);
 
                 getText.predictText(asl_letter);
             }
-        }
     }
     double distance(Point[] a, Point[] b){
 
@@ -282,7 +264,7 @@ public class Predict_Script : MonoBehaviour
                 int maxDist = 0;
                 for (int i = 0; i < a.Length; i++)
                 {
-                    int min = 1000000;
+                    int min = 100000;
                     for (int j = 0; j < b.Length; j++)
                     {
                         int dx = (a[i].X - b[j].X);
@@ -324,7 +306,7 @@ public class Predict_Script : MonoBehaviour
         RenderTexture.active = previous;
         RenderTexture.ReleaseTemporary(renderTex);
         return readableText;
-    }
+    }/* end of duplicateTexture()*/
 
 
     ~Predict_Script() {

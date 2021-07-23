@@ -728,28 +728,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  target:
-    target: 3
-    gameObject: {fileID: 1348169129}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 0
 --- !u!114 &21361685
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -762,40 +740,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  audioClip: {fileID: 0}
-  message:
-    content: Level 2 unlocked
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 0.49803925
-    g: 0.49411768
-    b: 0.9607844
-    a: 1
-  time: 1
-  target:
-    target: 3
-    gameObject: {fileID: 770321259}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 0, z: 2}
-  forceStop: 0
 --- !u!114 &21361686
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -808,40 +752,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  audioClip: {fileID: 0}
-  message:
-    content: Good job!  Don't forget to always wash your hands!
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 0.49841577
-    g: 0.49474904
-    b: 0.9622642
-    a: 1
-  time: 5
-  target:
-    target: 3
-    gameObject: {fileID: 770321259}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 0, z: 2}
-  forceStop: 0
 --- !u!114 &21361687
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -854,16 +764,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 21361686}
-  - {fileID: 21361685}
-  - {fileID: 21361684}
-  - {fileID: 21361690}
-  - {fileID: 21361689}
-  - {fileID: 21361691}
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &21361688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -876,7 +776,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!114 &21361689
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -889,28 +788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  target:
-    target: 3
-    gameObject: {fileID: 1643084842}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 1
 --- !u!114 &21361690
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -923,28 +800,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  target:
-    target: 3
-    gameObject: {fileID: 941254264}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 0
 --- !u!114 &21361691
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -957,28 +812,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  target:
-    target: 3
-    gameObject: {fileID: 1194075427}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 1
 --- !u!1 &23175705
 GameObject:
   m_ObjectHideFlags: 0
@@ -3003,31 +2836,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 242384025}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &79500510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3040,89 +2848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &79809461
 GameObject:
   m_ObjectHideFlags: 0
@@ -3744,31 +3469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 955408647}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &100923548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3781,89 +3481,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &102126778
 GameObject:
   m_ObjectHideFlags: 0
@@ -7582,7 +7199,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223465049}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e66272875433488ea4493c718e518d1, type: 3}
   m_Name: 
@@ -7643,39 +7260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 224062513}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &224062513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7688,16 +7272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 224062512}
-  items:
-  - option: 1
-    conditions: {fileID: 0}
-    actions: {fileID: 1473410978}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &224062514
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8175,31 +7749,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1737246836}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &236213196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8212,89 +7761,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &236956937
 GameObject:
   m_ObjectHideFlags: 0
@@ -8961,31 +8427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1826229929}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &253370949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8998,89 +8439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &255187749
 GameObject:
   m_ObjectHideFlags: 0
@@ -11292,39 +10650,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 318867241}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &318867241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11337,16 +10662,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 318867240}
-  items:
-  - option: 1
-    conditions: {fileID: 0}
-    actions: {fileID: 2034171667}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &318867242
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12437,31 +11752,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1982233894}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &342977761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12474,89 +11764,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &343170240
 GameObject:
   m_ObjectHideFlags: 0
@@ -12839,31 +12046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1938885396}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &354116871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12876,89 +12058,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &355251398
 GameObject:
   m_ObjectHideFlags: 0
@@ -13129,39 +12228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 358375658}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &358375658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13174,16 +12240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 358375657}
-  items:
-  - option: 1
-    conditions: {fileID: 0}
-    actions: {fileID: 2034171667}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &358375659
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13601,39 +12657,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 367640658}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &367640658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13646,16 +12669,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 367640657}
-  items:
-  - option: 1
-    conditions: {fileID: 0}
-    actions: {fileID: 747494447}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &367640659
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14214,39 +13227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 381063634}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &381063634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14259,16 +13239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 381063633}
-  items:
-  - option: 1
-    conditions: {fileID: 0}
-    actions: {fileID: 1517570803}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!65 &381063635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18117,31 +17087,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 305329547}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &490715006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18154,89 +17099,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &494042327
 GameObject:
   m_ObjectHideFlags: 0
@@ -20184,7 +19046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!114 &546635618
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -20197,12 +19058,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 546635619}
-  - {fileID: 546635621}
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &546635619
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -20215,28 +19070,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  target:
-    target: 3
-    gameObject: {fileID: 690670848}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 0
 --- !u!4 &546635620
 Transform:
   m_ObjectHideFlags: 0
@@ -20263,28 +19096,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  target:
-    target: 3
-    gameObject: {fileID: 3447093905902573858}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 0
 --- !u!1 &546743830
 GameObject:
   m_ObjectHideFlags: 0
@@ -22957,28 +21768,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  target:
-    target: 3
-    gameObject: {fileID: 502153229}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 0
 --- !u!114 &641667196
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -22991,12 +21780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 641667195}
-  - {fileID: 641667198}
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &641667197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23009,7 +21792,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!114 &641667198
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -23022,40 +21804,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  audioClip: {fileID: 0}
-  message:
-    content: Level 1
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 0.504717
-    g: 0.6096005
-    b: 1
-    a: 1
-  time: 2
-  target:
-    target: 3
-    gameObject: {fileID: 770321259}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 0, z: 2}
-  forceStop: 0
 --- !u!1 &642110504
 GameObject:
   m_ObjectHideFlags: 0
@@ -26547,28 +25295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  target:
-    target: 3
-    gameObject: {fileID: 2087783463}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 0
 --- !u!114 &747494446
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -26581,12 +25307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 747494448}
-  - {fileID: 747494445}
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &747494447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26599,7 +25319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!114 &747494448
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -26612,37 +25331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d234afa27d82846abbf91e13c4f5eedf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  valueFrom: 2
-  global:
-    allowTypesMask: -1
-    name: 
-  local:
-    allowTypesMask: -1
-    name: 
-    targetType: 2
-    targetObject: {fileID: 0}
-  list:
-    targetType: 3
-    targetObject: {fileID: 0}
-    select: 1
-    index: 0
-  variable:
-    variableType: 0
-    global:
-      allowTypesMask: 8
-      name: MedicinePill
-    local:
-      allowTypesMask: 8
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  value: 1
 --- !u!1 &749013343
 GameObject:
   m_ObjectHideFlags: 0
@@ -29764,40 +28452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  audioClip: {fileID: 0}
-  message:
-    content: Medicine Pill
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 0.26842916
-    g: 1
-    b: 0
-    a: 1
-  time: 5
-  target:
-    target: 3
-    gameObject: {fileID: 1352028185}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 2, z: 0}
-  forceStop: 0
 --- !u!114 &819058391
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -29810,11 +28464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 819058390}
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &819058392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29827,7 +28476,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!1 &819584550
 GameObject:
   m_ObjectHideFlags: 0
@@ -30321,39 +28969,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 837583619}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &837583619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30366,16 +28981,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 837583618}
-  items:
-  - option: 1
-    conditions: {fileID: 0}
-    actions: {fileID: 2034171667}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &837583620
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -33621,39 +32226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 940356571}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &940356571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33666,16 +32238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 940356570}
-  items:
-  - option: 1
-    conditions: {fileID: 0}
-    actions: {fileID: 1517570803}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!1 &940469455
 GameObject:
   m_ObjectHideFlags: 0
@@ -34136,31 +32698,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1746532053}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &945338865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34173,89 +32710,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &945373293
 GameObject:
   m_ObjectHideFlags: 0
@@ -36997,39 +35451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 1015548591}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &1015548591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37042,16 +35463,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 1015548590}
-  items:
-  - option: 1
-    conditions: {fileID: 0}
-    actions: {fileID: 1517570803}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!65 &1015548592
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37640,39 +36051,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 670bb82f9646e4e9f88a9fd84e371457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  comparison: 0
-  variable:
-    variableType: 0
-    global:
-      allowTypesMask: 8
-      name: MedicinePill
-    local:
-      allowTypesMask: 8
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  compareTo:
-    optionIndex: 0
-    value: 1
-    global:
-      allowTypesMask: 8
-      name: 
-    local:
-      allowTypesMask: 8
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &1024260930
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -37685,8 +36063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88544633e6f13414a9c20d38b5cb10a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conditions:
-  - {fileID: 1024260929}
 --- !u!114 &1024260931
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -37699,18 +36075,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3247faaff1642b0aa83bf65ab47007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Have medicine
-  conditionsList: {fileID: 1024260930}
-  actions: {fileID: 1698980533}
-  isExpanded: 1
-  onCheckConditions:
-    m_PersistentCalls:
-      m_Calls: []
-    m_CallsDirty: 1
-  onExecuteActions:
-    m_PersistentCalls:
-      m_Calls: []
-    m_CallsDirty: 1
 --- !u!114 &1024260932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37723,13 +36087,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec482fc994a34808b4a10d8d30f0bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clauses:
-  - {fileID: 1024260931}
-  defaultActions: {fileID: 819058392}
-  onInteract:
-    m_PersistentCalls:
-      m_Calls: []
-    m_CallsDirty: 1
 --- !u!1 &1027581276
 GameObject:
   m_ObjectHideFlags: 0
@@ -38959,40 +37316,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  audioClip: {fileID: 0}
-  message:
-    content: 'This level consist in you to pass quiz in your left side '
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 0.4575472
-    g: 0.5405106
-    b: 1
-    a: 1
-  time: 5
-  target:
-    target: 3
-    gameObject: {fileID: 770321259}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 0, z: 2}
-  forceStop: 0
 --- !u!114 &1064387153
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -39005,12 +37328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 1064387152}
-  - {fileID: 1064387155}
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &1064387154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39023,7 +37340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!114 &1064387155
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -39036,41 +37352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  audioClip: {fileID: 0}
-  message:
-    content: But don't  worry you can also prepare yourself for the quiz on learn
-      room
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 0.5613208
-    g: 0.6132462
-    b: 1
-    a: 1
-  time: 5
-  target:
-    target: 3
-    gameObject: {fileID: 770321259}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 0, z: 2}
-  forceStop: 0
 --- !u!1 &1066106574
 GameObject:
   m_ObjectHideFlags: 0
@@ -39861,39 +38142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 1106861972}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &1106861972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39906,16 +38154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 1106861971}
-  items:
-  - option: 1
-    conditions: {fileID: 0}
-    actions: {fileID: 1064387154}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &1106861973
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -40677,39 +38915,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 1143036015}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &1143036015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40722,16 +38927,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 1143036014}
-  items:
-  - option: 1
-    conditions: {fileID: 0}
-    actions: {fileID: 1568367713}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &1143036016
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -42051,39 +40246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 1183769882}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &1183769882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42096,16 +40258,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 1183769881}
-  items:
-  - option: 1
-    conditions: {fileID: 0}
-    actions: {fileID: 21361688}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &1183769883
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -43386,40 +41538,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  audioClip: {fileID: 0}
-  message:
-    content: Correct! Next Level unlocked
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 0.59406215
-    g: 0.5518868
-    b: 1
-    a: 1
-  time: 5
-  target:
-    target: 3
-    gameObject: {fileID: 770321259}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 0, z: 2}
-  forceStop: 0
 --- !u!114 &1226595584
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -43432,13 +41550,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 1226595583}
-  - {fileID: 1226595588}
-  - {fileID: 1226595587}
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &1226595585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43451,7 +41562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!114 &1226595587
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -43464,28 +41574,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  target:
-    target: 3
-    gameObject: {fileID: 458584527}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 1
 --- !u!114 &1226595588
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -43498,28 +41586,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  target:
-    target: 3
-    gameObject: {fileID: 932083013}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 1
 --- !u!1 &1226773866
 GameObject:
   m_ObjectHideFlags: 0
@@ -43597,39 +41663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 1228696451}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!65 &1228696450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43655,16 +41688,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 1228696449}
-  items:
-  - option: 1
-    conditions: {fileID: 0}
-    actions: {fileID: 641667197}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!1 &1231373989
 GameObject:
   m_ObjectHideFlags: 0
@@ -45427,39 +43450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 1278873302}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &1278873302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45472,16 +43462,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 1278873301}
-  items:
-  - option: 1
-    conditions: {fileID: 0}
-    actions: {fileID: 1226595585}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &1278873303
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -46687,39 +44667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 1330580616}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &1330580616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46732,16 +44679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 1330580615}
-  items:
-  - option: 1
-    conditions: {fileID: 0}
-    actions: {fileID: 1517570803}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!114 &1330580617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48496,31 +46433,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 2111836932}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &1386974324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48533,89 +46445,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1390729950
 GameObject:
   m_ObjectHideFlags: 0
@@ -49072,31 +46901,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 46369814}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &1408185001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49109,89 +46913,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1409160857
 GameObject:
   m_ObjectHideFlags: 0
@@ -51541,55 +49262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe21fe23cad14b3cbc622d92c17a9a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  character:
-    target: 2
-    character: {fileID: 1809640697}
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    global:
-      allowTypesMask: 512
-      name: 
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    cacheInstanceID: 0
-    cacheCharacterID: 0
-    cacheCharacter: {fileID: 0}
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  action: 0
-  bone: 9
-  instance:
-    target: 3
-    gameObject: {fileID: 629917922}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  space: 1
-  position: {x: 0, y: 0.12, z: 0}
-  rotation: {x: 0, y: -95, z: 0}
 --- !u!114 &1473410977
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -51602,11 +49274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 1473410976}
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &1473410978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51619,7 +49286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!1 &1473826537
 GameObject:
   m_ObjectHideFlags: 0
@@ -52850,31 +50516,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 528982909}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &1492896042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52887,89 +50528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1493312984
 GameObject:
   m_ObjectHideFlags: 0
@@ -53685,40 +51243,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  audioClip: {fileID: 0}
-  message:
-    content: You need make distance from each other!
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 0.44938955
-    g: 0.4292453
-    b: 1
-    a: 1
-  time: 4
-  target:
-    target: 3
-    gameObject: {fileID: 770321259}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 0, z: 2}
-  forceStop: 0
 --- !u!114 &1517570802
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -53731,11 +51255,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 1517570801}
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &1517570803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53748,7 +51267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!1 &1518507631
 GameObject:
   m_ObjectHideFlags: 0
@@ -54674,39 +52192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 1545273227}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &1545273227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54719,16 +52204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 1545273226}
-  items:
-  - option: 1
-    conditions: {fileID: 0}
-    actions: {fileID: 1517570803}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!65 &1545273228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55335,41 +52810,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  audioClip: {fileID: 0}
-  message:
-    content: Before you learn new words, you need to look for few seconds on blue
-      box to open the room
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 0.4431373
-    g: 0.4666667
-    b: 1
-    a: 1
-  time: 5
-  target:
-    target: 3
-    gameObject: {fileID: 770321259}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 0, z: 2}
-  forceStop: 0
 --- !u!114 &1568367712
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -55382,12 +52822,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 1568367711}
-  - {fileID: 1568367714}
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &1568367713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55400,7 +52834,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!114 &1568367714
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -55413,40 +52846,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  audioClip: {fileID: 0}
-  message:
-    content: Don't forget to make social distance
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 0.43867922
-    g: 0.46729568
-    b: 1
-    a: 1
-  time: 4
-  target:
-    target: 3
-    gameObject: {fileID: 770321259}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 0, z: 2}
-  forceStop: 0
 --- !u!1 &1572453762
 GameObject:
   m_ObjectHideFlags: 0
@@ -56004,31 +53403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 176804508}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &1588031039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56041,89 +53415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1592455779
 GameObject:
   m_ObjectHideFlags: 0
@@ -56343,31 +53634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1857351534}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &1596384011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56380,89 +53646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1596560820
 GameObject:
   m_ObjectHideFlags: 0
@@ -56541,39 +53724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 1597412803}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &1597412803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56586,16 +53736,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 1597412802}
-  items:
-  - option: 0
-    conditions: {fileID: 1024260932}
-    actions: {fileID: 0}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &1597412804
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -60534,40 +57674,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  audioClip: {fileID: 0}
-  message:
-    content: Thank you!
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 0.19122791
-    g: 1
-    b: 0
-    a: 1
-  time: 5
-  target:
-    target: 3
-    gameObject: {fileID: 1352028185}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 2, z: 0}
-  forceStop: 0
 --- !u!114 &1698980532
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -60580,11 +57686,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 1698980530}
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &1698980533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60597,7 +57698,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!1 &1699958513
 GameObject:
   m_ObjectHideFlags: 0
@@ -62039,31 +59139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 92051224}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &1751251640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62076,89 +59151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1752347684
 GameObject:
   m_ObjectHideFlags: 0
@@ -64542,31 +61534,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1352028187}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &1809640697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64579,89 +61546,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1810079937
 GameObject:
   m_ObjectHideFlags: 0
@@ -70243,31 +67127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 339888085}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &1979460094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70280,89 +67139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1979605315
 GameObject:
   m_ObjectHideFlags: 0
@@ -70893,39 +67669,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 2004660168}
-  isExitingApplication: 0
-  objectWithTag: Player
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &2004660168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70938,16 +67681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: ffffffff
-    values:
-    - {fileID: 2004660167}
-  items:
-  - option: 1
-    conditions: {fileID: 0}
-    actions: {fileID: 546635617}
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!4 &2004660169
 Transform:
   m_ObjectHideFlags: 0
@@ -71250,31 +67983,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 57473970}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &2008417371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71287,89 +67995,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &2008459596
 GameObject:
   m_ObjectHideFlags: 0
@@ -72335,7 +68960,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!114 &2034171668
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -72348,11 +68972,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 2034171669}
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &2034171669
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -72365,40 +68984,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 1
-  audioClip: {fileID: 0}
-  message:
-    content: Incorrect! Try again
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 1
-    g: 0.33490568
-    b: 0.33490568
-    a: 1
-  time: 5
-  target:
-    target: 3
-    gameObject: {fileID: 770321259}
-    global:
-      allowTypesMask: 512
-      name: 
-    local:
-      allowTypesMask: 512
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 0, z: 2}
-  forceStop: 0
 --- !u!4 &2034171670
 Transform:
   m_ObjectHideFlags: 0
@@ -72926,7 +69511,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057299655}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b50a62c79e81b094d953dc7669826df1, type: 3}
   m_Name: 
@@ -75328,31 +71913,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 801497409}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 74060096437904604, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  standFaceUp: {fileID: 74323205600563714, guid: e3a2eebe549364235b59f9dfdc456c61,
-    type: 2}
-  timeScaleCoefficient: 1
 --- !u!114 &2119245018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75365,89 +71925,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: c22873d7-5aca-4b8b-ab18-ac1e0310578e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 4
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 3
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 0
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &2120079842
 GameObject:
   m_ObjectHideFlags: 0
