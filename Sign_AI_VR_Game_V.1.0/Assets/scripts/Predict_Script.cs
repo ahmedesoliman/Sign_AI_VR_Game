@@ -69,7 +69,7 @@ public class Predict_Script : MonoBehaviour
 
 
     //Creates MOG2 Background Subtractor.
-    BackgroundSubtractorMOG2 ptrBackgroundMOG2 = BackgroundSubtractorMOG2.Create(10000, 200, false);
+    BackgroundSubtractorMOG2 ptrBackgroundMOG2 = BackgroundSubtractorMOG2.Create(5000, 200, false);
 
     // Start is called before the first frame update
     void Start()
@@ -162,7 +162,7 @@ public class Predict_Script : MonoBehaviour
         Cv2.ImShow("Canny", canny);
 
         // Update the background model
-        ptrBackgroundMOG2.Apply(cropFrame, fgMaskMOG2);
+        ptrBackgroundMOG2.Apply(cropFrame, fgMaskMOG2, 0);
 
         Cv2.ImShow("Foregound Mask", fgMaskMOG2);
         tex4 = OpenCvSharp.Unity.MatToTexture(fgMaskMOG2);
@@ -170,7 +170,7 @@ public class Predict_Script : MonoBehaviour
 
         // Detect edges using Threshold:/// Applies a fixed-level threshold to each array element.
 
-        Cv2.Threshold(canny, threshold_output, THRESH, 255, ThresholdTypes.Binary);
+        Cv2.Threshold(fgMaskMOG2, threshold_output, THRESH, 255, ThresholdTypes.Binary);
 
         tex2 = OpenCvSharp.Unity.MatToTexture(canny);
 
@@ -245,7 +245,7 @@ public class Predict_Script : MonoBehaviour
                     }
                 }
 
-                if (lowestDiff < DIFF_THRESH || lowestDiff > Diff_MAX)
+                if (lowestDiff < DIFF_THRESH)
                 { // Reset if Dust
                     asl_letter = (char)(((int)0));
                 }
@@ -270,7 +270,7 @@ public class Predict_Script : MonoBehaviour
                 int maxDist = 0;
                 for (int i = 0; i < a.Length; i++)
                 {
-                    int min = 100000;
+                    int min = 1000000;
                     for (int j = 0; j < b.Length; j++)
                     {
                         int dx = (a[i].X - b[j].X);
