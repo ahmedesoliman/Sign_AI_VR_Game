@@ -165,6 +165,7 @@ public class Predict_Script : MonoBehaviour
         ptrBackgroundMOG2.Apply(cropFrame, fgMaskMOG2, 0);
 
         Cv2.ImShow("Foregound Mask", fgMaskMOG2);
+        
         tex4 = OpenCvSharp.Unity.MatToTexture(fgMaskMOG2);
         display4.GetComponent<Renderer>().material.mainTexture = tex4;
 
