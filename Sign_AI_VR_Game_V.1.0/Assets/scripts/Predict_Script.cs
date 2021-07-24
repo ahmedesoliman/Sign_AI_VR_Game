@@ -18,17 +18,19 @@ public class Predict_Script : MonoBehaviour
     static Texture2D tex1;
     static Texture2D tex2;
     static Texture2D tex3;
+    static Texture2D tex4;          //BACKGROUND MOG2
 
     public GameObject display1;
     public GameObject display2;
     public GameObject display3;
+    public GameObject display4;         //BACKGROUND MOG2
 
 
     static Mat frame = new Mat();
     Mat canny = new Mat();
     Mat threshold_output = new Mat();
     Mat threshold_Load = new Mat();
-    Mat fgMaskMOG2 = new Mat();
+    Mat fgMaskMOG2 = new Mat();   // output for backgroundSUBMOG2
     Mat img1 = new Mat();
     Mat img2 = new Mat();
 
@@ -60,11 +62,14 @@ public class Predict_Script : MonoBehaviour
     BackgroundSubtractorMOG backgroundMOG;
     BackgroundSubtractorGMG backgroundGMG;
 
-    Ptr<BackgroundSubtractorMOG2> ptrBackgroundMOG2;
+    //Ptr<BackgroundSubtractorMOG2> ptrBackgroundMOG2;
 
     Ptr<BackgroundSubtractor> backgroundSubtractor;
 
 
+
+    //Creates MOG2 Background Subtractor.
+    BackgroundSubtractorMOG2 ptrBackgroundMOG2 = BackgroundSubtractorMOG2.Create(10000, 200, false);
 
     // Start is called before the first frame update
     void Start()
@@ -97,7 +102,7 @@ public class Predict_Script : MonoBehaviour
     void load_ASL()
     {
 
-        buffer = Resources.LoadAll("Train", typeof(Texture2D));
+        buffer = Resources.LoadAll("Alpha", typeof(Texture2D));
         int i = 0;
 
         foreach (var image in buffer)
@@ -121,7 +126,7 @@ public class Predict_Script : MonoBehaviour
             i++;
         }
         Debug.Log("End of for each loop");
-        var ptrBackgroundMOG2 = BackgroundSubtractorMOG2.Create(10000, 200, false);
+        //var ptrBackgroundMOG2 = BackgroundSubtractorMOG2.Create(10000, 200, false);
     }
 
     void predict(Mat frame)
@@ -131,9 +136,8 @@ public class Predict_Script : MonoBehaviour
 
         frame = OpenCvSharp.Unity.TextureToMat(webcam1);
 
-        //Creates MOG2 Background Subtractor.
-        var ptrBackgroundMOG2 = BackgroundSubtractorMOG2.Create(10000, 200, false);
-
+        ////Creates MOG2 Background Subtractor.
+        //var ptrBackgroundMOG2 = BackgroundSubtractorMOG2.Create(10000, 200, false);
         // Crop Frame to smaller region using the rectangle of interest method
 
         OpenCvSharp.Rect myROI = new OpenCvSharp.Rect(200, 200, 200, 200);
@@ -158,10 +162,11 @@ public class Predict_Script : MonoBehaviour
         Cv2.ImShow("Canny", canny);
 
         // Update the background model
-        ptrBackgroundMOG2.Apply(cropFrame, fgMaskMOG2, 0);
+        ptrBackgroundMOG2.Apply(cropFrame, fgMaskMOG2);
 
         Cv2.ImShow("Foregound Mask", fgMaskMOG2);
-
+        tex4 = OpenCvSharp.Unity.MatToTexture(fgMaskMOG2);
+        display4.GetComponent<Renderer>().material.mainTexture = tex4;
 
         // Detect edges using Threshold:/// Applies a fixed-level threshold to each array element.
 
