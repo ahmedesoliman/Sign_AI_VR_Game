@@ -162,7 +162,6 @@ public class Predict_Script : MonoBehaviour
 
         Cv2.ImShow("Foregound Mask", fgMaskMOG2);
 
-
         // Detect edges using Threshold:/// Applies a fixed-level threshold to each array element.
 
         Cv2.Threshold(canny, threshold_output, THRESH, 255, ThresholdTypes.Binary);
