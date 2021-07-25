@@ -59,6 +59,6 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Ignore all .meta files
-*.meta
+#*.meta
 
 
