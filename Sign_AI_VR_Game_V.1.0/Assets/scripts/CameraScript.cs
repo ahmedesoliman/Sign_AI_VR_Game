@@ -14,11 +14,13 @@ public class CameraScript : MonoBehaviour
                                                    // To locate where the script is located = RightClick -> Find References In Scene
                                                    // For identify correct camera call printCameraList()
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         setupCamera(CameraNumber);
         printCameraList();
+    }
+    void Start()
+    {
 
     }
     private static void setupCamera(int numberCamera = 0)
