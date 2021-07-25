@@ -26522,10 +26522,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 770321259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08e98f43a555f904a9b56dddae4ebc8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 87909906c186e0042b41ccd0b19c8de5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraNumber: 0
+  CameraNumber: 1
 --- !u!1 &770581340
 GameObject:
   m_ObjectHideFlags: 0
