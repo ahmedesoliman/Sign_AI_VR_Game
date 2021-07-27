@@ -69,7 +69,7 @@ public class Predict_Script : MonoBehaviour
 
 
     //Creates MOG2 Background Subtractor.
-    BackgroundSubtractorMOG2 ptrBackgroundMOG2 = BackgroundSubtractorMOG2.Create(5000, 200, false);
+    BackgroundSubtractorMOG2 ptrBackgroundMOG2 = BackgroundSubtractorMOG2.Create(10000, 200, false);
 
     // Start is called before the first frame update
     void Start()
