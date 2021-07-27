@@ -14,6 +14,7 @@ public class CameraScript : MonoBehaviour
                                                    // To locate where the script is located = RightClick -> Find References In Scene
                                                    // For identify correct camera call printCameraList()
 
+
     void Awake()
     {
         setupCamera(CameraNumber);
