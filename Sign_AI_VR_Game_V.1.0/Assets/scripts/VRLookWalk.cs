@@ -10,6 +10,7 @@ public class VRLookWalk : MonoBehaviour
     public float toggleAngle = 30.0f;
 
     public float speed = 5.0f;
+    public float rotationSpeed;
 
     public bool moveForward;
 
@@ -27,16 +28,32 @@ public class VRLookWalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (moveByHands)
+        //    if (moveByHands)
+        //    {
+        //        moveByHand();
+        //    }
+        //    else
+        //    {
+        //        moveByLooking();
+        //    }
+
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        Debug.Log(" horizontal input ------>>>>>" + horizontalInput);
+        Debug.Log(" vertical input------ >>>>> "+ verticalInput);
+
+        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
+        movementDirection.Normalize();
+
+        transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
+
+        if (movementDirection != Vector3.zero)
         {
-            moveByHand();
+            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
-        else
-        {
-            moveByLooking();
-        }
-     
-       
+
     }
 
     private void moveByLooking()
@@ -71,11 +88,11 @@ public class VRLookWalk : MonoBehaviour
         else if (predictChar == 'l')
         {
             //change the angle to left side
-            moveLeft();
+            rotateLeft();
         }
         else if (predictChar == 'v')
         {
-            moveRight();
+            rotateRight();
         }
         else
         {
@@ -89,18 +106,39 @@ public class VRLookWalk : MonoBehaviour
 
         cc.SimpleMove(forward * speed);
     }
-    private void moveLeft()
+    private void rotateLeft()
     {
-        Quaternion left = currentObject.rotation;
-        left.y -= 1;
-        currentObject.rotation = left;
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
+        movementDirection.Normalize();
+
+        transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
+
+        if (movementDirection != Vector3.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+        }
 
     }
 
-private void moveRight()
+    private void rotateRight()
     {
-        Quaternion right = currentObject.rotation;
-        right.y -= 1;
-        currentObject.rotation = right;
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
+        movementDirection.Normalize();
+
+        transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
+
+        if (movementDirection != Vector3.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+        }
+
     }
 }

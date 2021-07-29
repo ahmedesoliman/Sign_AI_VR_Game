@@ -17936,49 +17936,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2416c6ff25140145bf14114d041b627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quizManager: {fileID: 1304330702}
-  categoryBtnPrefab: {fileID: 0}
-  scrollHolder: {fileID: 0}
-  scoreText: {fileID: 0}
-  timerText: {fileID: 0}
-  lifeImageList: []
-  gameOverPanel: {fileID: 0}
-  mainMenu: {fileID: 0}
-  gamePanel: {fileID: 0}
-  correctCol:
-    r: 0.21960786
-    g: 0.50980395
-    b: 0.21960786
-    a: 1
-  wrongCol:
-    r: 0.86274517
-    g: 0.5411765
-    b: 0.5411765
-    a: 1
-  normalCol:
-    r: 0.6039216
-    g: 0.6642318
-    b: 0.7607843
-    a: 1
-  questionImg: {fileID: 0}
-  questionVideo: {fileID: 0}
-  questionAudio: {fileID: 0}
-  questionInfoText: {fileID: 0}
-  options:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  audioLength: 0
-  question:
-    questionInfo: 
-    questionType: 0
-    questionImage: {fileID: 0}
-    audioClip: {fileID: 0}
-    videoClip: {fileID: 0}
-    options: []
-    correctAns: 
-  answered: 0
 --- !u!4 &565897856
 Transform:
   m_ObjectHideFlags: 0
@@ -24013,14 +23970,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770321259}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.2, y: -7.9, z: 43.2}
+  m_LocalRotation: {x: -0, y: 0.01613441, z: -0, w: 0.9998698}
+  m_LocalPosition: {x: -12.199992, y: -7.9, z: 43.20005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1764769898}
   m_Father: {fileID: 1254588864}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 1.8490001, z: 0}
 --- !u!114 &770321261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38745,14 +38702,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254588863}
-  m_LocalRotation: {x: -0, y: 0.7271841, z: -0, w: 0.68644255}
+  m_LocalRotation: {x: 0, y: 0.24868964, z: 0, w: 0.9685833}
   m_LocalPosition: {x: 123.91, y: 8.86, z: 95.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 770321260}
   m_Father: {fileID: 2076461300}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 93.302, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 1468.8, z: 0}
 --- !u!114 &1254588865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38766,8 +38723,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vrCamera: {fileID: 770321260}
+  currentObject: {fileID: 0}
   toggleAngle: 30
   speed: 3
+  rotationSpeed: 720
   moveForward: 0
   moveByHands: 1
 --- !u!136 &1254588866
@@ -40015,28 +39974,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd4220c9fd73df4b8136e0df3913ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quizGameUI: {fileID: 565897855}
-  quizDataList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  timeInSeconds: 0
-  currentCategory: 
-  correctAnswerCount: 0
-  questions: []
-  selectedQuetion:
-    questionInfo: 
-    questionType: 0
-    questionImage: {fileID: 0}
-    audioClip: {fileID: 0}
-    videoClip: {fileID: 0}
-    options: []
-    correctAns: 
-  gameScore: 0
-  lifesRemaining: 0
-  currentTime: 0
-  dataScriptable: {fileID: 0}
-  gameStatus: 1
 --- !u!4 &1304330703
 Transform:
   m_ObjectHideFlags: 0
