@@ -5,12 +5,10 @@ using UnityEngine;
 public class VRLookWalk : MonoBehaviour
 {
     public Transform vrCamera;
-    public Transform currentObject;
 
     public float toggleAngle = 30.0f;
 
     public float speed = 5.0f;
-    public float rotationSpeed;
 
     public bool moveForward;
 
@@ -22,7 +20,6 @@ public class VRLookWalk : MonoBehaviour
     void Start()
     {
         cc = GetComponent<CharacterController>();
-        currentObject = GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -36,8 +33,6 @@ public class VRLookWalk : MonoBehaviour
         {
             moveByLooking();
         }
-
-
 
     }
 
@@ -79,10 +74,7 @@ public class VRLookWalk : MonoBehaviour
         {
             rotateRight();
         }
-        else
-        {
-           
-        }
+ 
     }
     private void moveForwardFunc()
     {

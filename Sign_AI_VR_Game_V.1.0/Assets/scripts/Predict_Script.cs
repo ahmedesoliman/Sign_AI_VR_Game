@@ -328,7 +328,6 @@ public class Predict_Script : MonoBehaviour
         return asl_letter;
     }
     ~Predict_Script() {
-        aslList.Clear();
         frame.Dispose();
         frame.Release();
         Cv2.DestroyAllWindows();
