@@ -13,6 +13,8 @@ public class VRLookWalk : MonoBehaviour
     public bool moveForward;
 
     private CharacterController cc;
+    
+    [SerializeField] private bool moveByHands = false; // By default move by looking downwards
 
     // Start is called before the first frame update
     void Start()
@@ -23,18 +25,71 @@ public class VRLookWalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if( vrCamera.eulerAngles.x >= toggleAngle && vrCamera.eulerAngles.x < 90.0f){
+        if (moveByHands)
+        {
+            moveByHand();
+        }
+        else
+        {
+            moveByLooking();
+        }
+
+    }
+
+    private void moveByLooking()
+    {
+        if (vrCamera.eulerAngles.x >= toggleAngle && vrCamera.eulerAngles.x < 90.0f)
+        {
             moveForward = true;
 
         }
-        else{
+        else
+        {
             moveForward = false;
         }
 
-        if (moveForward){
-            Vector3 forward = vrCamera.TransformDirection(Vector3.forward);
-
-            cc.SimpleMove(forward * speed);
+        if (moveForward)
+        {
+            moveForwardFunc();
         }
+    }
+    
+    private void moveByHand()
+    {
+        char predictChar = Predict_Script.getLetter();
+        Debug.Log("The character returned is ---> :" + predictChar);
+
+        // Move Forward
+        if (predictChar == 'c' )
+        {
+            moveForwardFunc();
+        }
+
+        else if (predictChar == 'l')
+        {
+            //change the angle to left side
+            rotateLeft();
+        }
+        else if (predictChar == 'v')
+        {
+            rotateRight();
+        }
+ 
+    }
+    private void moveForwardFunc()
+    {
+
+        Vector3 forward = vrCamera.TransformDirection(Vector3.forward);
+
+        cc.SimpleMove(forward * speed);
+    }
+    private void rotateLeft() {
+
+        transform.Rotate(-Vector3.up * (speed * 10) * Time.deltaTime);
+    }
+
+    private void rotateRight()
+    {
+        transform.Rotate(Vector3.up * (speed * 10) * Time.deltaTime);
     }
 }

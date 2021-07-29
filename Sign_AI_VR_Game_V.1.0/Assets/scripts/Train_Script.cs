@@ -8,6 +8,7 @@ public class Train_Script : MonoBehaviour
 {
     Mat frame = new Mat();
     Mat canny = new Mat();
+    Mat maskMOG2 = new Mat();
     Mat threshHoldoutput = new Mat();
     OpenCvSharp.Point[][] featureImage;
     OpenCvSharp.HierarchyIndex[] trainHierarchy;
@@ -15,33 +16,38 @@ public class Train_Script : MonoBehaviour
     int THRESH = 200;
     int maxIndex = 0;
 
-    static Texture2D  image;
+    static Texture2D image;
     static Texture2D tex1;
     static Texture2D tex2;
+    static Texture2D tex3;
 
     public GameObject Train_display1;
     public GameObject Train_display2;
+    public GameObject Train_display3;
 
     static WebCamTexture webcam1;
+
+    BackgroundSubtractorMOG2 backgroundMOG2 = BackgroundSubtractorMOG2.Create(10000, 200, false);
 
     // Start is called before the first frame update
     void Start()
     {
-        //WebCamDevice[] devices = WebCamTexture.devices;
-        //if (webcam1 == null)
-        //    webcam1 = new WebCamTexture(devices[1].name);
-        //if (!webcam1.isPlaying)
-        //    webcam1.Play();
-        //webcam1.requestedFPS = 30;
+        WebCamDevice[] devices = WebCamTexture.devices;
+        if (webcam1 == null)
+            webcam1 = new WebCamTexture(devices[0].name);
+        if (!webcam1.isPlaying)
+            webcam1.Play();
+        webcam1.requestedFPS = 30;
 
-        webcam1 = CameraScript.getWebCamTexture();
-        CameraScript.printCameraList();
+        /* webcam1 = CameraScript.getWebCamTexture();*/
+    /*    CameraScript.printCameraList();*/
+
     }
 
     // Update is called once per frame
     void Update()
     {
-      /*  GetComponent<Renderer>().material.mainTexture = webcam1;*/
+   /*     GetComponent<Renderer>().material.mainTexture = webcam1;*/
         frame = OpenCvSharp.Unity.TextureToMat(webcam1);
         Train(frame);
 
@@ -60,14 +66,23 @@ public class Train_Script : MonoBehaviour
 
         Cv2.ImShow("Train Crop Frame", cropFrame);
 
-        Cv2.Canny(cropFrame, canny, 50, 200);
+        backgroundMOG2.Apply(cropFrame, maskMOG2, 0);
 
-        Cv2.ImShow("Train canny", canny);
-        tex2 = OpenCvSharp.Unity.MatToTexture(canny);
+        Cv2.ImShow("Train Mask", maskMOG2);
+
+        tex2 = OpenCvSharp.Unity.MatToTexture(maskMOG2);
 
         Train_display2.GetComponent<Renderer>().material.mainTexture = tex2;
 
-        Cv2.Threshold(canny, threshHoldoutput, THRESH, 255, ThresholdTypes.Binary);
+        Cv2.Canny(cropFrame, canny, 50, 200);
+
+        Cv2.ImShow("Train canny", canny);
+
+        tex3 = OpenCvSharp.Unity.MatToTexture(canny);
+
+        Train_display3.GetComponent<Renderer>().material.mainTexture = tex3;
+
+        Cv2.Threshold(maskMOG2, threshHoldoutput, THRESH, 255, ThresholdTypes.Binary);
         
         Cv2.FindContours(threshHoldoutput, out featureImage, out trainHierarchy, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, new Point(0, 0));
 
@@ -88,7 +103,7 @@ public class Train_Script : MonoBehaviour
         // Draw Contours         
         Cv2.DrawContours(contourImg, featureImage, maxIndex, new Scalar(0, 0, 255), 2, LineTypes.Link8, trainHierarchy, 0, new Point(0, 0));
 
-        /*        Cv2.ImShow("Train Img", contourImg);*/
+        /* Cv2.ImShow("Train Img", contourImg);*/
 
         if (Input.anyKey && !(Input.GetMouseButton(0) || Input.GetMouseButton(1)) && !(Input.GetKeyDown(KeyCode.LeftAlt) || Input.GetKeyDown(KeyCode.RightAlt)))
         {
@@ -109,13 +124,13 @@ public class Train_Script : MonoBehaviour
 
                 if (character >= 'A' || character <= 'Z' && character != ' ')
                 {
-                    Debug.Log("Char is: -----------> " + character);
+                    Debug.Log("Char is: -----------: " + character);
 
-                    image = OpenCvSharp.Unity.MatToTexture(canny);
+                    image = OpenCvSharp.Unity.MatToTexture(maskMOG2);
 
                     byte[] Bytes = image.EncodeToPNG();
 
-                    File.WriteAllBytes(Application.dataPath + "/Resources/Train/" + character + ".png", Bytes);
+                    File.WriteAllBytes(Application.dataPath + "/Resources/Alpha/" + character + ".png", Bytes);
                 }
             }
         }

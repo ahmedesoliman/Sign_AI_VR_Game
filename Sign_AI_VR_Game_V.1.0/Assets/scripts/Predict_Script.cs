@@ -18,24 +18,23 @@ public class Predict_Script : MonoBehaviour
     static Texture2D tex1;
     static Texture2D tex2;
     static Texture2D tex3;
-    static Texture2D tex4;          //BACKGROUND MOG2
+    static Texture2D tex4;            //BACKGROUND MOG2
 
     public GameObject display1;
     public GameObject display2;
     public GameObject display3;
-    public GameObject display4;         //BACKGROUND MOG2
+    public GameObject display4;        //BACKGROUND MOG2
 
 
     static Mat frame = new Mat();
     Mat canny = new Mat();
     Mat threshold_output = new Mat();
     Mat threshold_Load = new Mat();
-    Mat fgMaskMOG2 = new Mat();   // output for backgroundSUBMOG2
+    Mat fgMaskMOG2 = new Mat();       // output for backgroundSUBMOG2
     Mat img1 = new Mat();
     Mat img2 = new Mat();
 
 
-    char asl_letter;
     int DIFF_THRESH = 230;
     int Diff_MAX = 360;
     double THRESH = 200;
@@ -56,32 +55,26 @@ public class Predict_Script : MonoBehaviour
     OpenCvSharp.HierarchyIndex[] hierarchy;
     OpenCvSharp.HierarchyIndex[] hierarchy1;
 
-    BackgroundSubtractorMOG2 backgroundMOG2;
-
-    BackgroundSubtractorKNN backgroundKNN;
-    BackgroundSubtractorMOG backgroundMOG;
-    BackgroundSubtractorGMG backgroundGMG;
-
-    //Ptr<BackgroundSubtractorMOG2> ptrBackgroundMOG2;
-
-    Ptr<BackgroundSubtractor> backgroundSubtractor;
-
-
-
     //Creates MOG2 Background Subtractor.
-    BackgroundSubtractorMOG2 ptrBackgroundMOG2 = BackgroundSubtractorMOG2.Create(5000, 200, false);
+    BackgroundSubtractorMOG2 ptrBackgroundMOG2 = BackgroundSubtractorMOG2.Create(10000, 200, false);
 
+
+
+    static List<char> aslList = new List<char>();
+
+    static char asl_letter;             // Changed here 7/29/21          
     // Start is called before the first frame update
     void Start()
     {
-        //WebCamDevice[] devices = WebCamTexture.devices;
-        //if (webcam1 == null)
-        //    webcam1 = new WebCamTexture(devices[0].name);
-        //if (!webcam1.isPlaying)
-        //    webcam1.Play();
-        //webcam1.requestedFPS = 30;
+ /*       WebCamDevice[] devices = WebCamTexture.devices;
+        if (webcam1 == null)
+            webcam1 = new WebCamTexture(devices[0].name);
+        if (!webcam1.isPlaying)
+            webcam1.Play();
+        webcam1.requestedFPS = 30;*/
+
         webcam1 = CameraScript.getWebCamTexture();
-        
+
         load_ASL();
 
     }
@@ -89,7 +82,7 @@ public class Predict_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Renderer>().material.mainTexture = webcam1;
+  /*      GetComponent<Renderer>().material.mainTexture = webcam1;*/
         frame = OpenCvSharp.Unity.TextureToMat(webcam1);
 
         predict(frame);
@@ -109,7 +102,7 @@ public class Predict_Script : MonoBehaviour
         {
             img1 = OpenCvSharp.Unity.TextureToMat(duplicateTexture((Texture2D)buffer[i]));
 
-            Cv2.CvtColor(img1, img2, ColorConversionCodes.RGB2GRAY);
+            Cv2.CvtColor(img1, img2, ColorConversionCodes.BGR2GRAY);
 
             // Detect edges using Threshold
             //The threshold method returns two outputs. The first is the threshold that was used and the second output is the thresholded image.
@@ -131,13 +124,9 @@ public class Predict_Script : MonoBehaviour
 
     void predict(Mat frame)
     {
-      /*  Cv2.ImShow("Frame ", frame);*/
-      /*  display1.GetComponent<Renderer>().material.mainTexture = webcam1;*/
-
+       
         frame = OpenCvSharp.Unity.TextureToMat(webcam1);
-
-        ////Creates MOG2 Background Subtractor.
-        //var ptrBackgroundMOG2 = BackgroundSubtractorMOG2.Create(10000, 200, false);
+  
         // Crop Frame to smaller region using the rectangle of interest method
 
         OpenCvSharp.Rect myROI = new OpenCvSharp.Rect(200, 200, 200, 200);
@@ -150,32 +139,26 @@ public class Predict_Script : MonoBehaviour
 
         display1.GetComponent<Renderer>().material.mainTexture = tex1;
 
-        /// Finds edges in an image using Canny algorithm.
+        // Update & Apply the background model
+        ptrBackgroundMOG2.Apply(cropFrame, fgMaskMOG2, 0);
 
-        Mat dialtedst = new Mat();
-        Mat erodedst = new Mat();
-        Mat element = new Mat();
-        Mat outputPoly = new Mat();
+        Cv2.ImShow("Foregound Mask", fgMaskMOG2);
+       
+        tex2 = OpenCvSharp.Unity.MatToTexture(fgMaskMOG2);
+        display2.GetComponent<Renderer>().material.mainTexture = tex2;
+
+        // Finds edges in an image using Canny algorithm.
 
         Cv2.Canny(cropFrame, canny, 50, 200);
 
         Cv2.ImShow("Canny", canny);
-
-        // Update the background model
-        ptrBackgroundMOG2.Apply(cropFrame, fgMaskMOG2, 0);
-
-        Cv2.ImShow("Foregound Mask", fgMaskMOG2);
         
-        tex4 = OpenCvSharp.Unity.MatToTexture(fgMaskMOG2);
-        display4.GetComponent<Renderer>().material.mainTexture = tex4;
+        tex3 = OpenCvSharp.Unity.MatToTexture(canny);
+        display3.GetComponent<Renderer>().material.mainTexture = tex3;
 
         // Detect edges using Threshold:/// Applies a fixed-level threshold to each array element.
 
         Cv2.Threshold(fgMaskMOG2, threshold_output, THRESH, 255, ThresholdTypes.Binary);
-
-        tex2 = OpenCvSharp.Unity.MatToTexture(canny);
-
-        display2.GetComponent<Renderer>().material.mainTexture = tex2;
 
         // Find contours
         Cv2.FindContours(threshold_output, out feature_image, out hierarchy, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, new Point(0, 0));
@@ -197,9 +180,9 @@ public class Predict_Script : MonoBehaviour
         // Draw Contours         
         Cv2.DrawContours(contourImg, feature_image, maxIndex, new Scalar(0, 0, 255), 2, LineTypes.Link8, hierarchy, 0, new Point(0, 0));
 
-        tex3 = OpenCvSharp.Unity.MatToTexture(contourImg);
+        tex4 = OpenCvSharp.Unity.MatToTexture(contourImg);
 
-        display3.GetComponent<Renderer>().material.mainTexture = tex3;
+        display4.GetComponent<Renderer>().material.mainTexture = tex4;
 
         Cv2.ImShow("Countour Img", contourImg);
 /*
@@ -245,16 +228,19 @@ public class Predict_Script : MonoBehaviour
                         asl_letter = (char)(((int)'a') + i);
                     }
                 }
-
-                if (lowestDiff < DIFF_THRESH)
-                { // Reset if Dust
+            // Reset if Not Matching
+            if (lowestDiff < DIFF_THRESH && lowestDiff > Diff_MAX)
+                { 
                     asl_letter = (char)(((int)0));
                 }
 
                 Debug.Log("The letter is: " + asl_letter + " | difference: " + lowestDiff);
 
                 getText.predictText(asl_letter);
-            }
+  /*          aslList.Insert(0, 'a');*/
+          /*  aslList.Add(asl_letter);*/
+
+        }
     }
     double distance(Point[] a, Point[] b){
 
@@ -271,7 +257,7 @@ public class Predict_Script : MonoBehaviour
                 int maxDist = 0;
                 for (int i = 0; i < a.Length; i++)
                 {
-                    int min = 1000000;
+                    int min = 100000;
                     for (int j = 0; j < b.Length; j++)
                     {
                         int dx = (a[i].X - b[j].X);
@@ -315,9 +301,33 @@ public class Predict_Script : MonoBehaviour
         return readableText;
     }/* end of duplicateTexture()*/
 
+    public static char getLetter()
+    {
 
+/*        int counter = 0;
+        int maxCount = 3;
+        char returnCharacter = '\0';
+
+        for (int i = 1; i <= aslList.Count; i++)
+        {
+            if (aslList[i] == aslList[i+1])
+            {
+                counter++;
+            }
+            else if (aslList[i] == aslList.Count)
+            {
+                i = 0;
+            }
+            if (counter == maxCount)
+            {
+                returnCharacter = aslList[i];
+                counter = 0;
+                return returnCharacter;
+            }
+        }*/
+        return asl_letter;
+    }
     ~Predict_Script() {
-
         frame.Dispose();
         frame.Release();
         Cv2.DestroyAllWindows();
