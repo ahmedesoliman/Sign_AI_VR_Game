@@ -60,19 +60,20 @@ public class Predict_Script : MonoBehaviour
 
 
 
-    static List<char> aslList;
+    static List<char> aslList = new List<char>();
+
     static char asl_letter;             // Changed here 7/29/21          
     // Start is called before the first frame update
     void Start()
     {
-        WebCamDevice[] devices = WebCamTexture.devices;
+ /*       WebCamDevice[] devices = WebCamTexture.devices;
         if (webcam1 == null)
             webcam1 = new WebCamTexture(devices[0].name);
         if (!webcam1.isPlaying)
             webcam1.Play();
-        webcam1.requestedFPS = 30;
+        webcam1.requestedFPS = 30;*/
 
-        /*       webcam1 = CameraScript.getWebCamTexture();*/
+        webcam1 = CameraScript.getWebCamTexture();
 
         load_ASL();
 
@@ -81,7 +82,7 @@ public class Predict_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Renderer>().material.mainTexture = webcam1;
+  /*      GetComponent<Renderer>().material.mainTexture = webcam1;*/
         frame = OpenCvSharp.Unity.TextureToMat(webcam1);
 
         predict(frame);
@@ -236,9 +237,10 @@ public class Predict_Script : MonoBehaviour
                 Debug.Log("The letter is: " + asl_letter + " | difference: " + lowestDiff);
 
                 getText.predictText(asl_letter);
-            aslList.Add(asl_letter);
- 
-            }
+  /*          aslList.Insert(0, 'a');*/
+          /*  aslList.Add(asl_letter);*/
+
+        }
     }
     double distance(Point[] a, Point[] b){
 
@@ -301,17 +303,18 @@ public class Predict_Script : MonoBehaviour
 
     public static char getLetter()
     {
-        int counter = 0;
-        int maxCount = 10;
+
+/*        int counter = 0;
+        int maxCount = 3;
         char returnCharacter = '\0';
 
-        for(int i = 0; i <= aslList.Count; i++)
+        for (int i = 1; i <= aslList.Count; i++)
         {
-            if (aslList[i] == aslList[i + 1])
+            if (aslList[i] == aslList[i+1])
             {
                 counter++;
             }
-            else if(aslList[i] == aslList.Count)
+            else if (aslList[i] == aslList.Count)
             {
                 i = 0;
             }
@@ -319,14 +322,13 @@ public class Predict_Script : MonoBehaviour
             {
                 returnCharacter = aslList[i];
                 counter = 0;
+                return returnCharacter;
             }
-            aslList.Clear();
-
-        }
-
-        return returnCharacter;
+        }*/
+        return asl_letter;
     }
     ~Predict_Script() {
+        aslList.Clear();
         frame.Dispose();
         frame.Release();
         Cv2.DestroyAllWindows();
