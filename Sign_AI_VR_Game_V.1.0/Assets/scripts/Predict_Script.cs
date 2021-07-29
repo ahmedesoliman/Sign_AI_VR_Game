@@ -35,7 +35,6 @@ public class Predict_Script : MonoBehaviour
     Mat img2 = new Mat();
 
 
-    char asl_letter;
     int DIFF_THRESH = 230;
     int Diff_MAX = 360;
     double THRESH = 200;
@@ -59,6 +58,10 @@ public class Predict_Script : MonoBehaviour
     //Creates MOG2 Background Subtractor.
     BackgroundSubtractorMOG2 ptrBackgroundMOG2 = BackgroundSubtractorMOG2.Create(10000, 200, false);
 
+
+
+    static List<char> aslList;
+    static char asl_letter;             // Changed here 7/29/21          
     // Start is called before the first frame update
     void Start()
     {
@@ -233,6 +236,8 @@ public class Predict_Script : MonoBehaviour
                 Debug.Log("The letter is: " + asl_letter + " | difference: " + lowestDiff);
 
                 getText.predictText(asl_letter);
+            aslList.Add(asl_letter);
+ 
             }
     }
     double distance(Point[] a, Point[] b){
@@ -294,7 +299,33 @@ public class Predict_Script : MonoBehaviour
         return readableText;
     }/* end of duplicateTexture()*/
 
+    public static char getLetter()
+    {
+        int counter = 0;
+        int maxCount = 10;
+        char returnCharacter = '\0';
 
+        for(int i = 0; i <= aslList.Count; i++)
+        {
+            if (aslList[i] == aslList[i + 1])
+            {
+                counter++;
+            }
+            else if(aslList[i] == aslList.Count)
+            {
+                i = 0;
+            }
+            if (counter == maxCount)
+            {
+                returnCharacter = aslList[i];
+                counter = 0;
+            }
+            aslList.Clear();
+
+        }
+
+        return returnCharacter;
+    }
     ~Predict_Script() {
         frame.Dispose();
         frame.Release();

@@ -50,15 +50,23 @@ public class VRLookWalk : MonoBehaviour
 
         if (moveForward)
         {
-            Vector3 forward = vrCamera.TransformDirection(Vector3.forward);
-
-            cc.SimpleMove(forward * speed);
+            moveForwardFunc();
         }
     }
     
     private void moveByHand()
     {
-        // TODO
+        Debug.Log("The character returned is ---> :" + Predict_Script.getLetter());
+        //if (Predict_Script.getLetter() == 'c')
+        //{
+        //    moveForwardFunc();
+        //}
+    }
+    private void moveForwardFunc()
+    {
 
+        Vector3 forward = vrCamera.TransformDirection(Vector3.forward);
+
+        cc.SimpleMove(forward * speed);
     }
 }
