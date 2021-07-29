@@ -28,31 +28,16 @@ public class VRLookWalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //    if (moveByHands)
-        //    {
-        //        moveByHand();
-        //    }
-        //    else
-        //    {
-        //        moveByLooking();
-        //    }
-
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-
-        Debug.Log(" horizontal input ------>>>>>" + horizontalInput);
-        Debug.Log(" vertical input------ >>>>> "+ verticalInput);
-
-        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
-        movementDirection.Normalize();
-
-        transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
-
-        if (movementDirection != Vector3.zero)
+        if (moveByHands)
         {
-            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+            moveByHand();
         }
+        else
+        {
+            moveByLooking();
+        }
+
+
 
     }
 
@@ -106,10 +91,26 @@ public class VRLookWalk : MonoBehaviour
 
         cc.SimpleMove(forward * speed);
     }
-    private void rotateLeft()
-    {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+    private void rotateLeft() { 
+
+        char predictChar = Predict_Script.getLetter();
+    
+  
+        float horizontalInput =1f;
+        float verticalInput = 1f;
+
+/*
+        if (predictChar == 'l')
+        {
+            float horizontalInput = horizontalMaxInput--;
+        }
+
+        if (predictChar = 'w')
+        {
+
+            float verticalInput = verticalMinInput++;
+        }*/
+
 
         Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
         movementDirection.Normalize();
