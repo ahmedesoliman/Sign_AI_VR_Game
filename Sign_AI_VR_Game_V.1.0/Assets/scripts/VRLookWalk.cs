@@ -88,12 +88,15 @@ public class VRLookWalk : MonoBehaviour
     }
     private void moveLeft()
     {
-        Vector3 left = vrCamera.TransformDirection(Vector3.left);
-        cc.SimpleMove(left * speed);
+        Vector3 originalPos = vrCamera.position;
+        originalPos.x = originalPos.x - 1;
+        vrCamera.position = originalPos;
+
     }
     private void moveRight()
     {
-        Vector3 right = vrCamera.TransformDirection(Vector3.right);
-        cc.SimpleMove(right * speed);
+        Vector3 originalPos = vrCamera.position;
+        originalPos.x = originalPos.x + 1;
+        vrCamera.position = originalPos;
     }
 }
