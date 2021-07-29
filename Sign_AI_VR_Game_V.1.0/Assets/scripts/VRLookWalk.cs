@@ -5,6 +5,7 @@ using UnityEngine;
 public class VRLookWalk : MonoBehaviour
 {
     public Transform vrCamera;
+    public Transform currentObject;
 
     public float toggleAngle = 30.0f;
 
@@ -20,6 +21,7 @@ public class VRLookWalk : MonoBehaviour
     void Start()
     {
         cc = GetComponent<CharacterController>();
+        currentObject = GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -33,6 +35,7 @@ public class VRLookWalk : MonoBehaviour
         {
             moveByLooking();
         }
+     
        
     }
 
@@ -88,15 +91,16 @@ public class VRLookWalk : MonoBehaviour
     }
     private void moveLeft()
     {
-        Quaternion originalPos = vrCamera.rotation;
-        originalPos.x = originalPos.x - 1;
-        vrCamera.rotation = originalPos;
+        Quaternion left = currentObject.rotation;
+        left.y -= 1;
+        currentObject.rotation = left;
 
     }
-    private void moveRight()
+
+private void moveRight()
     {
-        Quaternion originalPos = vrCamera.rotation;
-        originalPos.x = originalPos.x + 1;
-        vrCamera.rotation = originalPos;
+        Quaternion right = currentObject.rotation;
+        right.y -= 1;
+        currentObject.rotation = right;
     }
 }
