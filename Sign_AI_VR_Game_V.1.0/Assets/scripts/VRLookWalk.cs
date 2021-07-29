@@ -88,15 +88,15 @@ public class VRLookWalk : MonoBehaviour
     }
     private void moveLeft()
     {
-        Vector3 originalPos = vrCamera.position;
+        Quaternion originalPos = vrCamera.rotation;
         originalPos.x = originalPos.x - 1;
-        vrCamera.position = originalPos;
+        vrCamera.rotation = originalPos;
 
     }
     private void moveRight()
     {
-        Vector3 originalPos = vrCamera.position;
+        Quaternion originalPos = vrCamera.rotation;
         originalPos.x = originalPos.x + 1;
-        vrCamera.position = originalPos;
+        vrCamera.rotation = originalPos;
     }
 }
