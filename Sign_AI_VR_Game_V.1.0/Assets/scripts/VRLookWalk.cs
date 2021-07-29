@@ -91,55 +91,13 @@ public class VRLookWalk : MonoBehaviour
 
         cc.SimpleMove(forward * speed);
     }
-    private void rotateLeft() { 
+    private void rotateLeft() {
 
-        char predictChar = Predict_Script.getLetter();
-    
-  
-        float horizontalInput =1f;
-        float verticalInput = 1f;
-
-/*
-        if (predictChar == 'l')
-        {
-            float horizontalInput = horizontalMaxInput--;
-        }
-
-        if (predictChar = 'w')
-        {
-
-            float verticalInput = verticalMinInput++;
-        }*/
-
-
-        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
-        movementDirection.Normalize();
-
-        transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
-
-        if (movementDirection != Vector3.zero)
-        {
-            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-        }
-
+        transform.Rotate(-Vector3.up * (speed * 10) * Time.deltaTime);
     }
 
     private void rotateRight()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-
-        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
-        movementDirection.Normalize();
-
-        transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
-
-        if (movementDirection != Vector3.zero)
-        {
-            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-        }
-
+        transform.Rotate(Vector3.up * (speed * 10) * Time.deltaTime);
     }
 }
