@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Question 
+public class QuestionTitle 
 {
     // Pattern :  -> What is the letter + <char> + ? 
     private string initialString;
     private char letter;
 
     // Constructors
-    public Question(string defaultTitle, char letter = (char)0)
+    public QuestionTitle(string defaultTitle, char letter = (char)0)
     {
         initialString = defaultTitle + " ";
         this.letter = letter;

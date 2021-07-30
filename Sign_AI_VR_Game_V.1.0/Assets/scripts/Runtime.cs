@@ -11,6 +11,8 @@ public class Runtime : MonoBehaviour
     public static bool isLevel1 = false;
     public static bool isPreLevel2 = false;
     public static bool isLevel2 = false;
+    public static bool isLevel3 = false;
+
     public GameObject level1;
     public GameObject level2;
 
