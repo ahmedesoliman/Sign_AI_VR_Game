@@ -18,7 +18,7 @@ public class getText : MonoBehaviour
     void Start()
     {
         changingText = GetComponent<TextMeshProUGUI>();
-        Debug.Log(changingText);
+        //Debug.Log(changingText);
 
       /*  StartCoroutine(callText());*/
     }

@@ -118,7 +118,7 @@ public class Predict_Script : MonoBehaviour
             //contours returns a vector<vector<point>>
             i++;
         }
-        Debug.Log("End of for each loop");
+        //Debug.Log("End of for each loop");
         //var ptrBackgroundMOG2 = BackgroundSubtractorMOG2.Create(10000, 200, false);
     }
 

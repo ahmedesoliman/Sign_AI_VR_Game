@@ -33,25 +33,28 @@ public class randomImageSelection : MonoBehaviour
     {
         var dir = new DirectoryInfo(@"./Assets/Resources/Alpha");
         var info = dir.GetFiles("*.png*");
+        Debug.Log("dir => " + dir);
+        Debug.Log("info => " + info);
+
 
         char predictChar = Predict_Script.getLetter();
-        
-            foreach (var file in info)
-            {
-                string fileName = Path.GetFileName(file.ToString());
+        Debug.Log("predict char:" + predictChar);
+        //    foreach (var file in info)
+        //    {
+        //        string fileName = Path.GetFileName(file.ToString());
 
-                string extracted = fileName.Substring(0, 1);
+        //        string extracted = fileName.Substring(0, 1);
 
-                char fileChar = Convert.ToChar(extracted);
+        //        char fileChar = Convert.ToChar(extracted);
 
-                Debug.Log("---------------:" + fileChar);
+        //        Debug.Log("---------------:" + fileChar);
 
-                if (predictChar == fileChar)
-                {
-                    Debug.Log("Letter has been found in the DIR");
-                }
-            }
-            StartCoroutine(RandomPicture());
+        //        if (predictChar == fileChar)
+        //        {
+        //            Debug.Log("Letter has been found in the DIR");
+        //        }
+        //    }
+        //    StartCoroutine(RandomPicture());
     }
 
 

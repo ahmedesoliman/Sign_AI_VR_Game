@@ -73,8 +73,8 @@ public class Quiz : MonoBehaviour
 
         //Debug.Log("platform[i]:" + platforms[correctAnswer]);
         // Set the title
-        Debug.Log("Answer is --->" + platforms[correctAnswer]);
-        Debug.Log("The position of answer is --->" + platforms[correctAnswer].transform.position);
+        //Debug.Log("Answer is --->" + platforms[correctAnswer]);
+        //Debug.Log("The position of answer is --->" + platforms[correctAnswer].transform.position);
 
         // change the correct platform 
         correctPlatform.transform.position = platforms[correctAnswer].transform.Find("Platform").position;
