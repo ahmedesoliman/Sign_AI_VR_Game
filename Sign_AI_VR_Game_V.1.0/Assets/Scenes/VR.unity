@@ -24774,7 +24774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: What is this letter in ASL?
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -24843,13 +24843,13 @@ MonoBehaviour:
   m_margin: {x: 1.0784073, y: 2.0469208, z: 0.048828125, w: 0.9305515}
   m_textInfo:
     textComponent: {fileID: 791143766}
-    characterCount: 27
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 5
-    wordCount: 6
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 2
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -52646,6 +52646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   filebuffer: []
+  questionTitle: {fileID: 0}
 --- !u!65 &1738444722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55802,13 +55803,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826198748}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 55.6, y: 3.26, z: -14.79}
   m_LocalScale: {x: 4.031313, y: 0.100000024, z: 3.595211}
   m_Children: []
   m_Father: {fileID: 2087224809}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 360, z: 0}
 --- !u!65 &1826198750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62851,6 +62852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   filebuffer: []
+  questionTitle: {fileID: 791143766}
 --- !u!65 &2068681773
 BoxCollider:
   m_ObjectHideFlags: 0

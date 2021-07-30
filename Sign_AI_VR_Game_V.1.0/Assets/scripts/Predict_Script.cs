@@ -239,7 +239,7 @@ public class Predict_Script : MonoBehaviour
                     asl_letter = (char)(((int)0));
                 }
 
-                Debug.Log("The letter is: " + asl_letter + " | difference: " + lowestDiff);
+/*                Debug.Log("The letter is: " + asl_letter + " | difference: " + lowestDiff);*/
 
                 getText.predictText(asl_letter);
   /*          aslList.Insert(0, 'a');*/
