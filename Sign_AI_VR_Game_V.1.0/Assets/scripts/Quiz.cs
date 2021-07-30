@@ -5,12 +5,12 @@ using System;
 using System.Linq;
 using TMPro;
 
-public class Quiz : MonoBehaviour
+public class Quiz : CorrectAnswer
 {
     // Start is called before the first frame update
     //private List<Quiz_Question.Question<string>> listOfQuestion; // Question type includes answers
     private QuestionTitle question;
-    private int numbersOfCorrectAnswers = 0;       // Numbers of correct answer which user got
+    private static int numbersOfCorrectAnswers = 0;       // Numbers of correct answer which user got
     private UnityEngine.Object[] buffer;    // Holds all 2d textures of ASL images
     private int numberOfQuestions;
     // Folder settings
@@ -42,11 +42,16 @@ public class Quiz : MonoBehaviour
     }
     void Start()
     {
+  
     }
     private void Update()
     {
     }
-
+    
+    public static void updateScore()
+    {
+        numbersOfCorrectAnswers++;
+    }
     private void setTheObjects()
     {
         for (int i = 0; i < platforms.Length; i++)
@@ -61,6 +66,11 @@ public class Quiz : MonoBehaviour
 
         //Debug.Log("platform[i]:" + platforms[correctAnswer]);
         // Set the title
+        Debug.Log("Answer is --->" + platforms[correctAnswer]);
+        Debug.Log("The position of answer is --->" + platforms[correctAnswer].transform.position);
+
+        // change the correct platform 
+        correctPlatform.transform.position = platforms[correctAnswer].transform.Find("Platform").position;
         question.changeQuestion((int)Convert.ToChar(platforms[correctAnswer].name));
         questionTitle.text = question.getQuestion();
 

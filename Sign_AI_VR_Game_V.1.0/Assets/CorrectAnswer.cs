@@ -11,6 +11,7 @@ public class CorrectAnswer : MonoBehaviour
         {
             Debug.Log("Correct");
             Runtime.point++;
+            Quiz.updateScore();
         }
     }
 }
