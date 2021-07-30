@@ -5,7 +5,7 @@ using System;
 using System.Linq;
 using TMPro;
 
-public class Quiz : CorrectAnswer
+public class Quiz : MonoBehaviour
 {
     // Start is called before the first frame update
     //private List<Quiz_Question.Question<string>> listOfQuestion; // Question type includes answers
@@ -22,10 +22,10 @@ public class Quiz : CorrectAnswer
 
     [SerializeField] private TMP_Text questionTitle;
     [SerializeField] private GameObject correctPlatform;
+    [SerializeField] public GameObject teleportPlatform;
+    public GameObject player;
 
-    private GameObject player;
-    
-
+   
 
     void Awake()
     {
@@ -37,7 +37,7 @@ public class Quiz : CorrectAnswer
         setTheObjects();
 
         Debug.Log("[QUIZ 3] Loaded components successfully");
-
+      
 
     }
     void Start()
@@ -46,13 +46,20 @@ public class Quiz : CorrectAnswer
     }
     private void Update()
     {
+
+
     }
-    
-    public static void updateScore()
+    protected void teleportToBase()
+    {
+        player.transform.position = teleportPlatform.transform.position;
+
+    }
+    public void updateScore()
     {
         numbersOfCorrectAnswers++;
+        setTheObjects();
     }
-    private void setTheObjects()
+    public void setTheObjects()
     {
         for (int i = 0; i < platforms.Length; i++)
         {
