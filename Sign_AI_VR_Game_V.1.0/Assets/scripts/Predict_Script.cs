@@ -19,11 +19,13 @@ public class Predict_Script : MonoBehaviour
     static Texture2D tex2;
     static Texture2D tex3;
     static Texture2D tex4;            //BACKGROUND MOG2
+    static Texture2D tex5;            //BACKGROUND MOG2
 
     public GameObject display1;
     public GameObject display2;
     public GameObject display3;
     public GameObject display4;        //BACKGROUND MOG2
+    public GameObject display5;        //BACKGROUND MOG2
 
 
     static Mat frame = new Mat();
@@ -162,6 +164,9 @@ public class Predict_Script : MonoBehaviour
 
         // Find contours
         Cv2.FindContours(threshold_output, out feature_image, out hierarchy, RetrievalModes.Tree, ContourApproximationModes.ApproxSimple, new Point(0, 0));
+
+        tex5 = OpenCvSharp.Unity.MatToTexture(fgMaskMOG2);
+        display5.GetComponent<Renderer>().material.mainTexture = tex5;
 
         double largest_area = 0;
 
