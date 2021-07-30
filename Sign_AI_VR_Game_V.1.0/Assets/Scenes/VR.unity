@@ -6284,6 +6284,7 @@ MonoBehaviour:
   display2: {fileID: 1270381575}
   display3: {fileID: 366967672}
   display4: {fileID: 171933692}
+  display5: {fileID: 1826198748}
 --- !u!4 &223465054 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4166369762391052209, guid: 7630f5d65485343628b4e24ae8900ef2,
@@ -38234,7 +38235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254588863}
   m_LocalRotation: {x: -0, y: -0.010372622, z: -0, w: 0.99994624}
-  m_LocalPosition: {x: 133.76, y: 8.86, z: 98.59}
+  m_LocalPosition: {x: 122.6, y: 8.86, z: 98.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 770321260}
