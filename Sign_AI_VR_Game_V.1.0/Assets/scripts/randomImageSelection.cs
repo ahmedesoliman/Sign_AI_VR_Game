@@ -19,8 +19,8 @@ public class randomImageSelection : MonoBehaviour
     {
         myTexture = Resources.LoadAll("Test", typeof(Texture2D));
         rawImage = GameObject.Find("ImageBox");
-        wiatforLetter();
-
+        StartCoroutine(setRandom());
+        //wiatforLetter();
     }
 
     // Update is called once per frame
@@ -29,45 +29,60 @@ public class randomImageSelection : MonoBehaviour
     
     }
 
-    void wiatforLetter()
+    void waitForLetter()
     {
-        var dir = new DirectoryInfo(@"./Assets/Resources/Alpha");
-        var info = dir.GetFiles("*.png*");
-        Debug.Log("dir => " + dir);
-        Debug.Log("info => " + info);
+        //// Step 1: set the letter texture to unity
+        //// Step 2: store this char into variable for later - char correctChar
+        char correctChar = Random();
+
+        if (correctChar == Predict_Script.getLetter())
+        {
+            StartCoroutine(setRandom());
+        }
+      
+        //var dir = new DirectoryInfo(@"./Assets/Resources/Alpha");
+        //var info = dir.GetFiles("*.png*");
+        //Debug.Log("dir => " + dir);
+        //Debug.Log("info => " + info);
 
 
-        char predictChar = Predict_Script.getLetter();
-        Debug.Log("predict char:" + predictChar);
-        //    foreach (var file in info)
-        //    {
-        //        string fileName = Path.GetFileName(file.ToString());
+        //char predictChar = Predict_Script.getLetter();
+        //Debug.Log("predict char:" + predictChar);
+        ////foreach (var file in info)
+        ////{
+        ////    string fileName = Path.GetFileName(file.ToString());
 
-        //        string extracted = fileName.Substring(0, 1);
+        ////    string extracted = fileName.Substring(0, 1);
 
-        //        char fileChar = Convert.ToChar(extracted);
+        ////    char fileChar = Convert.ToChar(extracted);
 
-        //        Debug.Log("---------------:" + fileChar);
+        ////    Debug.Log("---------------:" + fileChar);
 
-        //        if (predictChar == fileChar)
-        //        {
-        //            Debug.Log("Letter has been found in the DIR");
-        //        }
-        //    }
-        //    StartCoroutine(RandomPicture());
+        ////    if (predictChar == fileChar)
+        ////    {
+        ////        Debug.Log("Letter has been found in the DIR");
+        ////    }
+        ////}
+        //RandomPicture();
     }
 
-
-    IEnumerator RandomPicture()
+    IEnumerator setRandom()
     {
-            setRandom();
-            yield return new WaitForSeconds(3);
+        Random();
+        yield return new WaitForSeconds(3);
+        waitForLetter();
+    }
+    //void RandomPicture()
+    //{
+    //        setRandom();
+    //        yield return new WaitForSeconds(3);
         
-    }
-    void setRandom()
+    //}
+    public char Random()
     {
         Texture2D texture = (Texture2D)myTexture[UnityEngine.Random.Range(0, myTexture.Length)];
         rawImage.GetComponent<Renderer>().material.mainTexture = texture;
+        return Convert.ToChar(texture.ToString().Substring(0, 1));
     }
 
 }

@@ -303,28 +303,6 @@ public class Predict_Script : MonoBehaviour
 
     public static char getLetter()
     {
-
-/*        int counter = 0;
-        int maxCount = 3;
-        char returnCharacter = '\0';
-
-        for (int i = 1; i <= aslList.Count; i++)
-        {
-            if (aslList[i] == aslList[i+1])
-            {
-                counter++;
-            }
-            else if (aslList[i] == aslList.Count)
-            {
-                i = 0;
-            }
-            if (counter == maxCount)
-            {
-                returnCharacter = aslList[i];
-                counter = 0;
-                return returnCharacter;
-            }
-        }*/
         return asl_letter;
     }
     ~Predict_Script() {
