@@ -5,8 +5,6 @@ using System.Security.Cryptography;
 using UnityEngine.UI;
 
 
-
-
 public class ImageScript : MonoBehaviour
 
 {

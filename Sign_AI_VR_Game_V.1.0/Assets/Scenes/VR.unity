@@ -251,114 +251,6 @@ Transform:
   m_Father: {fileID: 1807057952}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8246994
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8246995}
-  - component: {fileID: 8246998}
-  - component: {fileID: 8246997}
-  - component: {fileID: 8246996}
-  m_Layer: 5
-  m_Name: Scroll View
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8246995
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8246994}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 217804557}
-  - {fileID: 1425375249}
-  - {fileID: 845188236}
-  m_Father: {fileID: 398136406}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 650, y: 300}
-  m_SizeDelta: {x: 200, y: 200}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8246996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8246994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Content: {fileID: 1960975338}
-  m_Horizontal: 1
-  m_Vertical: 1
-  m_MovementType: 1
-  m_Elasticity: 0.1
-  m_Inertia: 1
-  m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
-  m_Viewport: {fileID: 217804557}
-  m_HorizontalScrollbar: {fileID: 1425375250}
-  m_VerticalScrollbar: {fileID: 845188237}
-  m_HorizontalScrollbarVisibility: 2
-  m_VerticalScrollbarVisibility: 2
-  m_HorizontalScrollbarSpacing: -3
-  m_VerticalScrollbarSpacing: -3
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &8246997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8246994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &8246998
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8246994}
-  m_CullTransparentMesh: 0
 --- !u!1 &8600974
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,28 +591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 1
 --- !u!114 &21361685
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -733,40 +603,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  audioClip: {fileID: 0}
-  message:
-    content: 
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  time: 2
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 2, z: 0}
-  forceStop: 0
 --- !u!114 &21361686
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -779,40 +615,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  audioClip: {fileID: 0}
-  message:
-    content: 
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  time: 2
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 2, z: 0}
-  forceStop: 0
 --- !u!114 &21361687
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -825,10 +627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &21361688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -841,7 +639,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!114 &21361689
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -854,28 +651,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 1
 --- !u!114 &21361690
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -888,28 +663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 1
 --- !u!114 &21361691
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -922,28 +675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 1
 --- !u!114 &21361692
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -956,10 +687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!1 &23175705
 GameObject:
   m_ObjectHideFlags: 0
@@ -3145,30 +2872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  footElevate: 0
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 0}
-  standFaceUp: {fileID: 0}
-  timeScaleCoefficient: 1
 --- !u!114 &100923548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3181,89 +2884,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: 483f9d91-5886-4274-9576-c18def43cbaa
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 6
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 1
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &102126778
 GameObject:
   m_ObjectHideFlags: 0
@@ -5030,7 +4650,7 @@ Transform:
   m_LocalScale: {x: 4.031313, y: 0.100000024, z: 3.5952108}
   m_Children: []
   m_Father: {fileID: 2087224809}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
 --- !u!65 &171933694
 BoxCollider:
@@ -6326,95 +5946,6 @@ Transform:
   m_Father: {fileID: 1470803980}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &217804556
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 217804557}
-  - component: {fileID: 217804560}
-  - component: {fileID: 217804559}
-  - component: {fileID: 217804558}
-  m_Layer: 5
-  m_Name: Viewport
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &217804557
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 217804556}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1960975338}
-  m_Father: {fileID: 8246995}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: -17}
-  m_Pivot: {x: 0, y: 1}
---- !u!114 &217804558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 217804556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 0
---- !u!114 &217804559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 217804556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &217804560
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 217804556}
-  m_CullTransparentMesh: 0
 --- !u!1 &218289201
 GameObject:
   m_ObjectHideFlags: 0
@@ -7335,30 +6866,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  footElevate: 0
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 0}
-  standFaceUp: {fileID: 0}
-  timeScaleCoefficient: 1
 --- !u!114 &236213196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7371,89 +6878,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: 75091012-34bd-4632-865e-8b50e9dacf46
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 6
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 1
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &236956937
 GameObject:
   m_ObjectHideFlags: 0
@@ -8007,30 +7431,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  footElevate: 0
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 0}
-  standFaceUp: {fileID: 0}
-  timeScaleCoefficient: 1
 --- !u!114 &253370949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8043,89 +7443,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: ccc29a33-607d-4e41-94be-9e088448b7c4
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 6
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 1
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &255187749
 GameObject:
   m_ObjectHideFlags: 0
@@ -9443,7 +8760,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1.2347412, y: -222}
+  m_AnchoredPosition: {x: 1, y: -150}
   m_SizeDelta: {x: 368.67664, y: 235.60007}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &297403492
@@ -10150,39 +9467,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  isExitingApplication: 0
-  objectWithTag: 
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &318867241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10195,13 +9479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: 
-    values: []
-  items: []
-  disableFrame: -1
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &318867242
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11213,30 +10490,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  footElevate: 0
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 0}
-  standFaceUp: {fileID: 0}
-  timeScaleCoefficient: 1
 --- !u!114 &342977761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11249,89 +10502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: b77eb5de-b71b-4b0e-ba14-f9132f3c846e
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 6
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 1
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &343632186
 GameObject:
   m_ObjectHideFlags: 0
@@ -11551,30 +10721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  footElevate: 0
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 0}
-  standFaceUp: {fileID: 0}
-  timeScaleCoefficient: 1
 --- !u!114 &354116871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11587,89 +10733,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: 191f8aec-6566-4063-975f-a35f84181284
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 6
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 1
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &356837549
 GameObject:
   m_ObjectHideFlags: 0
@@ -11808,39 +10871,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  isExitingApplication: 0
-  objectWithTag: 
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &358375658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11853,13 +10883,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: 
-    values: []
-  items: []
-  disableFrame: -1
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &358375659
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12635,39 +11658,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  isExitingApplication: 0
-  objectWithTag: 
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &381063634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12680,13 +11670,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: 
-    values: []
-  items: []
-  disableFrame: -1
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!65 &381063635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12969,81 +11952,6 @@ Transform:
   m_Father: {fileID: 2065382190}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
---- !u!1 &398136405
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 398136406}
-  - component: {fileID: 398136408}
-  - component: {fileID: 398136407}
-  m_Layer: 5
-  m_Name: Panel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &398136406
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 398136405}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8246995}
-  m_Father: {fileID: 945604290}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &398136407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 398136405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &398136408
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 398136405}
-  m_CullTransparentMesh: 0
 --- !u!1 &398791941
 GameObject:
   m_ObjectHideFlags: 0
@@ -13979,7 +12887,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1731809599}
-  - {fileID: 945604290}
   - {fileID: 1384027069}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -16117,30 +15024,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  footElevate: 0
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 0}
-  standFaceUp: {fileID: 0}
-  timeScaleCoefficient: 1
 --- !u!114 &490715006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16153,89 +15036,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: f7e2889b-feba-47ec-a2eb-a877722e721a
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 6
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 1
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &494042327
 GameObject:
   m_ObjectHideFlags: 0
@@ -18030,7 +16830,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!114 &546635618
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -18043,10 +16842,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &546635619
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -18059,28 +16854,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 1
 --- !u!4 &546635620
 Transform:
   m_ObjectHideFlags: 0
@@ -18107,28 +16880,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 1
 --- !u!114 &546635622
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -18141,10 +16892,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!1 &546743830
 GameObject:
   m_ObjectHideFlags: 0
@@ -20739,28 +19486,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 1
 --- !u!114 &641667196
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -20773,10 +19498,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &641667197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20789,7 +19510,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!114 &641667198
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -20802,40 +19522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  audioClip: {fileID: 0}
-  message:
-    content: 
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  time: 2
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 2, z: 0}
-  forceStop: 0
 --- !u!114 &641667199
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -20848,10 +19534,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!1 &642110504
 GameObject:
   m_ObjectHideFlags: 0
@@ -25204,7 +23886,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770778142}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.011154}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 0.69935, y: 0.7229, z: 1}
   m_Children:
   - {fileID: 514794457}
@@ -25215,7 +23897,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 201.16, y: -165}
+  m_AnchoredPosition: {x: 150, y: -100}
   m_SizeDelta: {x: 340.14502, y: 70.14722}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &770778144
@@ -25972,7 +24654,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2087224809}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -25998,7 +24680,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: What is the letter ...? in ASL
+  m_text: What is this letter in ASL?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -26043,7 +24725,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 19
+  m_firstOverflowCharacterIndex: 20
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -26067,9 +24749,9 @@ MonoBehaviour:
   m_margin: {x: 1.0784073, y: 2.0469208, z: 0.048828125, w: 0.9305515}
   m_textInfo:
     textComponent: {fileID: 791143766}
-    characterCount: 30
+    characterCount: 27
     spriteCount: 0
-    spaceCount: 6
+    spaceCount: 5
     wordCount: 6
     linkCount: 0
     lineCount: 2
@@ -26856,42 +25538,6 @@ Transform:
   m_Father: {fileID: 1898800867}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &825121418
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 825121419}
-  m_Layer: 5
-  m_Name: Sliding Area
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &825121419
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 825121418}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 945950750}
-  m_Father: {fileID: 1425375249}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: -20}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &825229456
 GameObject:
   m_ObjectHideFlags: 0
@@ -27223,39 +25869,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  isExitingApplication: 0
-  objectWithTag: 
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &837583619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27268,13 +25881,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: 
-    values: []
-  items: []
-  disableFrame: -1
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &837583620
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -27350,130 +25956,6 @@ Transform:
   m_Father: {fileID: 155704345}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &845188235
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 845188236}
-  - component: {fileID: 845188239}
-  - component: {fileID: 845188238}
-  - component: {fileID: 845188237}
-  m_Layer: 5
-  m_Name: Scrollbar Vertical
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &845188236
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 845188235}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1067162887}
-  m_Father: {fileID: 8246995}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: -17}
-  m_Pivot: {x: 1, y: 1}
---- !u!114 &845188237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 845188235}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1653596704}
-  m_HandleRect: {fileID: 1653596703}
-  m_Direction: 2
-  m_Value: 1
-  m_Size: 0.61
-  m_NumberOfSteps: 0
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &845188238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 845188235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &845188239
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 845188235}
-  m_CullTransparentMesh: 0
 --- !u!1 &847352867
 GameObject:
   m_ObjectHideFlags: 0
@@ -30364,39 +28846,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  isExitingApplication: 0
-  objectWithTag: 
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &940356571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30409,13 +28858,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: 
-    values: []
-  items: []
-  disableFrame: -1
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!1 &940469455
 GameObject:
   m_ObjectHideFlags: 0
@@ -30936,30 +29378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  footElevate: 0
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 0}
-  standFaceUp: {fileID: 0}
-  timeScaleCoefficient: 1
 --- !u!114 &945338865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30972,89 +29390,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: d5bc8d51-b4c1-4343-9290-a2502ef530cc
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 6
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 1
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &945373293
 GameObject:
   m_ObjectHideFlags: 0
@@ -31085,192 +29420,6 @@ Transform:
   m_Father: {fileID: 1947852083}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &945604289
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 945604290}
-  - component: {fileID: 945604294}
-  - component: {fileID: 945604293}
-  - component: {fileID: 945604292}
-  - component: {fileID: 945604291}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &945604290
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945604289}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 398136406}
-  m_Father: {fileID: 433911966}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!114 &945604291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945604289}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 660a031724e709b4baaa7dc54c3188ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &945604292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945604289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &945604293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945604289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
---- !u!223 &945604294
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945604289}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!1 &945950749
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 945950750}
-  - component: {fileID: 945950752}
-  - component: {fileID: 945950751}
-  m_Layer: 5
-  m_Name: Handle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &945950750
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945950749}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 825121419}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &945950751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945950749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &945950752
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945950749}
-  m_CullTransparentMesh: 0
 --- !u!1 &947104810
 GameObject:
   m_ObjectHideFlags: 0
@@ -33592,39 +31741,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  isExitingApplication: 0
-  objectWithTag: 
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &1015548591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33637,13 +31753,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: 
-    values: []
-  items: []
-  disableFrame: -1
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!65 &1015548592
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35209,40 +33318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  audioClip: {fileID: 0}
-  message:
-    content: 
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  time: 2
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 2, z: 0}
-  forceStop: 0
 --- !u!114 &1064387153
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -35255,10 +33330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &1064387154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35271,7 +33342,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!114 &1064387155
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -35284,40 +33354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  audioClip: {fileID: 0}
-  message:
-    content: 
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  time: 2
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 2, z: 0}
-  forceStop: 0
 --- !u!114 &1064387156
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -35330,10 +33366,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!1 &1066804081
 GameObject:
   m_ObjectHideFlags: 0
@@ -35445,42 +33477,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066804081}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1067162886
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1067162887}
-  m_Layer: 5
-  m_Name: Sliding Area
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1067162887
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067162886}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1653596703}
-  m_Father: {fileID: 845188236}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: -20}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1067888117
 GameObject:
   m_ObjectHideFlags: 0
@@ -36030,39 +34026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  isExitingApplication: 0
-  objectWithTag: 
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &1106861972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36075,13 +34038,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: 
-    values: []
-  items: []
-  disableFrame: -1
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &1106861973
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -36843,39 +34799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  isExitingApplication: 0
-  objectWithTag: 
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &1143036015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36888,13 +34811,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: 
-    values: []
-  items: []
-  disableFrame: -1
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &1143036016
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -37994,39 +35910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  isExitingApplication: 0
-  objectWithTag: 
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &1183769882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38039,13 +35922,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: 
-    values: []
-  items: []
-  disableFrame: -1
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &1183769883
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -39267,40 +37143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  audioClip: {fileID: 0}
-  message:
-    content: 
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  time: 2
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 2, z: 0}
-  forceStop: 0
 --- !u!114 &1226595584
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -39313,10 +37155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &1226595585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39329,7 +37167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!114 &1226595586
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -39342,10 +37179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &1226595587
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -39358,28 +37191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 1
 --- !u!114 &1226595588
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -39392,28 +37203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa2e918f10d446697b122083e4c41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  active: 1
 --- !u!1 &1226773866
 GameObject:
   m_ObjectHideFlags: 0
@@ -39491,39 +37280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  isExitingApplication: 0
-  objectWithTag: 
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!65 &1228696450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39549,13 +37305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: 
-    values: []
-  items: []
-  disableFrame: -1
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!1 &1231373989
 GameObject:
   m_ObjectHideFlags: 0
@@ -40392,7 +38141,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254588863}
   m_LocalRotation: {x: -0, y: -0.010372622, z: -0, w: 0.99994624}
-  m_LocalPosition: {x: 140.4, y: 8.86, z: 98.4}
+  m_LocalPosition: {x: 124.7, y: 8.86, z: 98.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 770321260}
@@ -41164,39 +38913,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  isExitingApplication: 0
-  objectWithTag: 
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &1278873302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41209,13 +38925,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: 
-    values: []
-  items: []
-  disableFrame: -1
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!135 &1278873303
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -42402,39 +40111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  isExitingApplication: 0
-  objectWithTag: 
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &1330580616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42447,13 +40123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: 
-    values: []
-  items: []
-  disableFrame: -1
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!114 &1330580617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43575,7 +41244,7 @@ RectTransform:
   m_Children:
   - {fileID: 1673331482}
   m_Father: {fileID: 433911966}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -43894,30 +41563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  footElevate: 0
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 0}
-  standFaceUp: {fileID: 0}
-  timeScaleCoefficient: 1
 --- !u!114 &1386974324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43930,89 +41575,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: 8fcb4a2f-aca4-4a60-b273-63922c78bcff
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 6
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 1
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1390729950
 GameObject:
   m_ObjectHideFlags: 0
@@ -44264,112 +41826,6 @@ Transform:
   m_Father: {fileID: 6501634}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1407670721
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1407670722}
-  - component: {fileID: 1407670726}
-  - component: {fileID: 1407670725}
-  - component: {fileID: 1407670724}
-  - component: {fileID: 1407670723}
-  m_Layer: 0
-  m_Name: ImageBox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1407670722
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407670721}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 65.820015, y: 2.6900005, z: -14.098938}
-  m_LocalScale: {x: 5.73984, y: 3.4722207, z: 0.095664}
-  m_Children: []
-  m_Father: {fileID: 2087224809}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1407670723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407670721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec2cb5318a8c8c7489a3349b8ed402e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &1407670724
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407670721}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1407670725
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407670721}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1407670726
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407670721}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1408184997
 GameObject:
   m_ObjectHideFlags: 0
@@ -44434,30 +41890,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  footElevate: 0
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 0}
-  standFaceUp: {fileID: 0}
-  timeScaleCoefficient: 1
 --- !u!114 &1408185001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44470,89 +41902,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: fddb8f58-8149-450e-903b-dddc741fdea4
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 6
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 1
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1409160857
 GameObject:
   m_ObjectHideFlags: 0
@@ -45085,130 +42434,6 @@ Transform:
   m_Father: {fileID: 122945258}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1425375248
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1425375249}
-  - component: {fileID: 1425375252}
-  - component: {fileID: 1425375251}
-  - component: {fileID: 1425375250}
-  m_Layer: 5
-  m_Name: Scrollbar Horizontal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1425375249
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425375248}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 825121419}
-  m_Father: {fileID: 8246995}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 20}
-  m_Pivot: {x: 0, y: 0}
---- !u!114 &1425375250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425375248}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 945950751}
-  m_HandleRect: {fileID: 945950750}
-  m_Direction: 0
-  m_Value: 0
-  m_Size: 1
-  m_NumberOfSteps: 0
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1425375251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425375248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1425375252
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425375248}
-  m_CullTransparentMesh: 0
 --- !u!1 &1426888191
 GameObject:
   m_ObjectHideFlags: 0
@@ -47830,30 +45055,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  footElevate: 0
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 0}
-  standFaceUp: {fileID: 0}
-  timeScaleCoefficient: 1
 --- !u!114 &1492896042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47866,89 +45067,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: 722a1669-3183-4590-8ca2-abcfec588553
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 6
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 1
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1493312984
 GameObject:
   m_ObjectHideFlags: 0
@@ -48697,40 +45815,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  audioClip: {fileID: 0}
-  message:
-    content: 
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  time: 2
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 2, z: 0}
-  forceStop: 0
 --- !u!114 &1517570802
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -48743,10 +45827,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &1517570803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48759,7 +45839,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!114 &1517570804
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -48772,10 +45851,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!1 &1518507631
 GameObject:
   m_ObjectHideFlags: 0
@@ -49514,39 +46589,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  isExitingApplication: 0
-  objectWithTag: 
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &1545273227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49559,13 +46601,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: 
-    values: []
-  items: []
-  disableFrame: -1
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!65 &1545273228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50235,40 +47270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  audioClip: {fileID: 0}
-  message:
-    content: 
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  time: 2
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 2, z: 0}
-  forceStop: 0
 --- !u!114 &1568367712
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -50281,10 +47282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &1568367713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50297,7 +47294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!114 &1568367714
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -50310,40 +47306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  audioClip: {fileID: 0}
-  message:
-    content: 
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  time: 2
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 2, z: 0}
-  forceStop: 0
 --- !u!114 &1568367715
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -50356,10 +47318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!1 &1572354261
 GameObject:
   m_ObjectHideFlags: 0
@@ -50736,7 +47694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1.2347412, y: -306}
+  m_AnchoredPosition: {x: 1.2347412, y: -450}
   m_SizeDelta: {x: 371.3121, y: 167.94208}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1582605878
@@ -50746,7 +47704,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582605876}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc58c9e6605ca49b4a46d32fff118acd, type: 3}
   m_Name: 
@@ -51042,30 +48000,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  footElevate: 0
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 0}
-  standFaceUp: {fileID: 0}
-  timeScaleCoefficient: 1
 --- !u!114 &1588031039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51078,89 +48012,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: a1f3f37d-ed63-43d9-95e2-b71b89c23797
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 6
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 1
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1592455779
 GameObject:
   m_ObjectHideFlags: 0
@@ -51348,30 +48199,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  footElevate: 0
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 0}
-  standFaceUp: {fileID: 0}
-  timeScaleCoefficient: 1
 --- !u!114 &1596384011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51384,89 +48211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: 18af8ed1-52bc-4992-8408-5f943d2bd5e9
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 6
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 1
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1596560820
 GameObject:
   m_ObjectHideFlags: 0
@@ -52304,7 +49048,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2087224809}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -53674,80 +50418,6 @@ Transform:
   m_Father: {fileID: 768834414}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1653596702
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1653596703}
-  - component: {fileID: 1653596705}
-  - component: {fileID: 1653596704}
-  m_Layer: 5
-  m_Name: Handle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1653596703
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653596702}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1067162887}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.39}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1653596704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653596702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1653596705
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653596702}
-  m_CullTransparentMesh: 0
 --- !u!1 &1654703396
 GameObject:
   m_ObjectHideFlags: 0
@@ -55869,6 +52539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2cb5318a8c8c7489a3349b8ed402e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  filebuffer: []
 --- !u!65 &1738444722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56301,30 +52972,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  footElevate: 0
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 0}
-  standFaceUp: {fileID: 0}
-  timeScaleCoefficient: 1
 --- !u!114 &1751251640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56337,89 +52984,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: 47a863f3-1438-4423-8f25-dc8e41bf030c
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 6
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 1
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1753143677
 GameObject:
   m_ObjectHideFlags: 0
@@ -59106,6 +55670,99 @@ Transform:
   m_Father: {fileID: 727314300}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1826198748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1826198749}
+  - component: {fileID: 1826198752}
+  - component: {fileID: 1826198751}
+  - component: {fileID: 1826198750}
+  m_Layer: 0
+  m_Name: 'View_Five(Window) '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1826198749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826198748}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: 55.6, y: 3.26, z: -14.79}
+  m_LocalScale: {x: 4.031313, y: 0.100000024, z: 3.595211}
+  m_Children: []
+  m_Father: {fileID: 2087224809}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
+--- !u!65 &1826198750
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826198748}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1826198751
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826198748}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1826198752
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826198748}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1826229927
 GameObject:
   m_ObjectHideFlags: 0
@@ -63115,42 +59772,6 @@ Transform:
   m_Father: {fileID: 179190839}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1960975337
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1960975338}
-  m_Layer: 5
-  m_Name: Content
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1960975338
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960975337}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 873642303892493927}
-  m_Father: {fileID: 217804557}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 300}
-  m_Pivot: {x: 0, y: 1}
 --- !u!1 &1961056639
 GameObject:
   m_ObjectHideFlags: 0
@@ -63592,30 +60213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  footElevate: 0
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 0}
-  standFaceUp: {fileID: 0}
-  timeScaleCoefficient: 1
 --- !u!114 &1979460094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63628,89 +60225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: f5da1791-c80d-4d75-8cc4-f3921514d4d8
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 6
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 1
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &1979605315
 GameObject:
   m_ObjectHideFlags: 0
@@ -64303,39 +60817,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a95efcc70014cca8cfd305ffe59dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  isExitingApplication: 0
-  objectWithTag: 
-  storeSelf:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-  storeCollider:
-    variableType: 0
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
 --- !u!114 &2004660168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64348,13 +60829,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae039d3d50d64815846459174f0f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  igniters:
-    keys: 
-    values: []
-  items: []
-  disableFrame: -1
-  minDistance: 0
-  minDistanceToPlayer: 5
 --- !u!4 &2004660169
 Transform:
   m_ObjectHideFlags: 0
@@ -64627,30 +61101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  footElevate: 0
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 0}
-  standFaceUp: {fileID: 0}
-  timeScaleCoefficient: 1
 --- !u!114 &2008417371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64663,89 +61113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: e43be774-bb91-4fa9-8cb5-efb1e94b7791
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 6
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 1
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &2008459596
 GameObject:
   m_ObjectHideFlags: 0
@@ -65586,7 +61953,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3083c306715d143449f0ee1ab8caf43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileID: 0
 --- !u!114 &2034171668
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -65599,10 +61965,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!114 &2034171669
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -65615,40 +61977,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4822454db27024b729fa89743804450e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExpanded: 0
-  audioClip: {fileID: 0}
-  message:
-    content: 
-    postProcess: 0
-    translationID: 0
-  color:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  time: 2
-  target:
-    target: 3
-    gameObject: {fileID: 0}
-    global:
-      allowTypesMask: -1
-      name: 
-    local:
-      allowTypesMask: -1
-      name: 
-      targetType: 2
-      targetObject: {fileID: 0}
-    list:
-      targetType: 3
-      targetObject: {fileID: 0}
-      select: 1
-      index: 0
-    eventChangeVariable:
-      m_PersistentCalls:
-        m_Calls: []
-      m_CallsDirty: 1
-  offset: {x: 0, y: 2, z: 0}
-  forceStop: 0
 --- !u!4 &2034171670
 Transform:
   m_ObjectHideFlags: 0
@@ -65675,10 +62003,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d5a50368374438dbff3af09a8fefb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  executingIndex: -1
-  isExecuting: 0
-  cancelExecution: 0
 --- !u!1 &2036810651
 GameObject:
   m_ObjectHideFlags: 0
@@ -66396,6 +62720,113 @@ Transform:
   m_Father: {fileID: 1247496065}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2068681770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2068681771}
+  - component: {fileID: 2068681775}
+  - component: {fileID: 2068681774}
+  - component: {fileID: 2068681773}
+  - component: {fileID: 2068681772}
+  m_Layer: 0
+  m_Name: ImageBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2068681771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068681770}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 60.43, y: 3.26, z: -14.79}
+  m_LocalScale: {x: 4.031313, y: 0.100000024, z: 3.595211}
+  m_Children: []
+  m_Father: {fileID: 2087224809}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 90, y: 360, z: 0}
+--- !u!114 &2068681772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068681770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec2cb5318a8c8c7489a3349b8ed402e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filebuffer: []
+--- !u!65 &2068681773
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068681770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2068681774
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068681770}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &2068681775
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068681770}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2069474838
 GameObject:
   m_ObjectHideFlags: 0
@@ -67299,14 +63730,15 @@ Transform:
   m_LocalPosition: {x: -4.69, y: -4.400326, z: 2.2269135}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 223465054}
   - {fileID: 791143765}
   - {fileID: 1615722029}
-  - {fileID: 1407670722}
   - {fileID: 1831082619}
   - {fileID: 1270381579}
   - {fileID: 366967676}
-  - {fileID: 223465054}
   - {fileID: 171933693}
+  - {fileID: 1826198749}
+  - {fileID: 2068681771}
   m_Father: {fileID: 179190839}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -68347,7 +64779,7 @@ PrefabInstance:
     - target: {fileID: 4166369762391052209, guid: 7630f5d65485343628b4e24ae8900ef2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.63002
+      value: -22.84
       objectReference: {fileID: 0}
     - target: {fileID: 4166369762391052209, guid: 7630f5d65485343628b4e24ae8900ef2,
         type: 3}
@@ -68372,7 +64804,7 @@ PrefabInstance:
     - target: {fileID: 4166369762391052209, guid: 7630f5d65485343628b4e24ae8900ef2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4166369762391052209, guid: 7630f5d65485343628b4e24ae8900ef2,
         type: 3}
@@ -68470,30 +64902,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042fb19a4c3254667a3b04a38a506036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  character: {fileID: 0}
-  defaultState: {fileID: 0}
-  animEvents: {fileID: 0}
-  characterAttachments: {fileID: 0}
-  characterRotation: {}
-  headTrack: {fileID: 0}
-  footIK: {fileID: 0}
-  handIK: {fileID: 0}
-  stiffBody: 0
-  rotationVelocity: 0
-  useFootIK: 1
-  footLayerMask:
-    m_Bits: 4294967291
-  footElevate: 0
-  useHandIK: 1
-  useSmartHeadIK: 1
-  useProceduralLanding: 1
-  autoInitializeRagdoll: 1
-  ragdollMass: 80
-  stableTimeout: 0.5
-  standFaceDown: {fileID: 0}
-  standFaceUp: {fileID: 0}
-  timeScaleCoefficient: 1
 --- !u!114 &2119245018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68506,89 +64914,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5337897bdb4fdd80ef69fcef1511a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gid: 5499c9e2-7336-45fa-86d8-e7dfaa27d178
-  exitingApplication: 0
-  characterLocomotion:
-    isControllable: 1
-    isBusy: 0
-    runSpeed: 4
-    angularSpeed: 540
-    gravity: -9.81
-    maxFallSpeed: -100
-    canRun: 1
-    canJump: 1
-    jumpForce: 6
-    jumpTimes: 1
-    timeBetweenJumps: 0.5
-    pushForce: 1
-    terrainNormal: {x: 0, y: 1, z: 0}
-    verticalSpeed: 0
-    overrideFaceDirection: -1
-    overrideFaceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    faceDirection: 0
-    faceDirectionTarget:
-      target: 4
-      offset: {x: 0, y: 0, z: 0}
-      targetTransform: {fileID: 0}
-      targetPosition: {x: 0, y: 0, z: 0}
-      local:
-        allowTypesMask: -1
-        name: 
-        targetType: 2
-        targetObject: {fileID: 0}
-      global:
-        allowTypesMask: -1
-        name: 
-      list:
-        targetType: 3
-        targetObject: {fileID: 0}
-        select: 1
-        index: 0
-    canUseNavigationMesh: 0
-    lastGroundTime: 0
-    lastJumpTime: 0
-    jumpChain: 0
-    character: {fileID: 0}
-    animatorConstraint: 0
-    characterController: {fileID: 0}
-    navmeshAgent: {fileID: 0}
-    <currentLocomotionType>k__BackingField: 0
-    useGravity: 1
-  characterState:
-    forwardSpeed: {x: 0, y: 0, z: 0}
-    sidesSpeed: 0
-    pivotSpeed: 0
-    targetLock: 0
-    isGrounded: 1
-    isSliding: 0
-    isDashing: 0
-    verticalSpeed: 0
-    normal: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
-  ragdoll: {character: {fileID: 0}, charAnimator: {fileID: 0}, state: 0, isInitialized: 0,
-    interpolation: {x: 0, y: 0, z: 0}, changeTime: 0, stableTime: 0, startRecover: 0,
-    startRecoverDirection: {x: 0, y: 0, z: 0}, autoStandUp: 0}
-  save: 0
-  initSaveData:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &2120079842
 GameObject:
   m_ObjectHideFlags: 0
@@ -69503,166 +65828,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1001 &873642303892493926
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1960975338}
-    m_Modifications:
-    - target: {fileID: 4533374283945741023, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4533374283945741023, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4533374283945741023, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4533374283945741023, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4533374283945741023, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4533374283945741023, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_FontData.m_FontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4533374283945741023, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_FontData.m_BestFit
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 160
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6861934903954163154, guid: 5079ce37cc29c0c418774a169262d8f1,
-        type: 3}
-      propertyPath: m_Name
-      value: RecallText
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5079ce37cc29c0c418774a169262d8f1, type: 3}
---- !u!224 &873642303892493927 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4919940195669162997, guid: 5079ce37cc29c0c418774a169262d8f1,
-    type: 3}
-  m_PrefabInstance: {fileID: 873642303892493926}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &938605322954789768
 Transform:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class VRLookWalk : MonoBehaviour
 
     public float speed = 5.0f;
 
-    public bool moveForward;
+    public bool moveForward = true;
 
     private CharacterController cc;
     
