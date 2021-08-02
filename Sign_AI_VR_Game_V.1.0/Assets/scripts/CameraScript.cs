@@ -67,7 +67,7 @@ public class CameraScript : MonoBehaviour
     {
         for (int i = 0; i < devices.Length; i++)
         {
-            Debug.Log(string.Format("[{0}] Camera Index: {1} -> Camera Name: {2}",arg0: "CameraScript.cs" ,arg1: i, arg2: devices[i].name));
+            Debug.Log(string.Format("[{0}] Camera Index: {1}: Camera Name: {2}",arg0: "CameraScript.cs" ,arg1: i, arg2: devices[i].name));
         }
     }
 }

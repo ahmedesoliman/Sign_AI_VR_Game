@@ -14,6 +14,7 @@ public class randomImageSelection : MonoBehaviour
 
     public UnityEngine.Object[] filebuffer;
     private QuestionTitle question = new QuestionTitle("Show the letter ");
+
     [SerializeField] private TMP_Text questionTitle;
 
     char correctChar;
@@ -31,6 +32,7 @@ public class randomImageSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        questionTitle.text = question.getQuestion();
         waitForLetter();
     }
 
