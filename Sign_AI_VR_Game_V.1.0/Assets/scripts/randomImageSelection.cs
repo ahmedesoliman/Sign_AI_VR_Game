@@ -25,7 +25,7 @@ public class randomImageSelection : MonoBehaviour
         correctChar = Random();
         question.changeQuestion((int)correctChar);
         questionTitle.text = question.getQuestion();
-        Debug.Log("Question: " + question.getQuestion());
+/*        Debug.Log("Question: " + question.getQuestion());*/
     }
 
     // Update is called once per frame
