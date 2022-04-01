@@ -18,7 +18,7 @@ Implementing a virtual reality system acting as an interface between the Deaf-Mu
 
 ## Demo
 
-<img src= "./blob/main/Demo/01-04-2022-459.gif" width=auto height= auto>
+<img src= "https://github.com/ahmedesoliman/Sign_AI_VR_Game/blob/main/Demo/01-04-2022-459.gif" width=auto height= auto>
 <img src= "./demo/01-04-2022-461.gif" width=auto height= auto>
 
 ## What is the problem:
