@@ -30,18 +30,6 @@ Sign language is a language that consists of body movements, especially of hand 
 
 Usually, a sign language interpreter is used by deaf people to seek help for translating their thoughts to all of us. My prototype will help in identifying the alphabet and give the output in a text format. Later these alphabets can be used to form sentences. The model helps the muted people to communicate with everyone and express themselves. This not only makes their life emotionally better but also makes their life easier in the post covid-19 pandemic in communication and seeking help from medical professionals. As well as they become more employable and independent. It also becomes a lot easier for everyone to understand the muted people who would in-turn be able to help them.
 
-## Architecture:
-
-<img src= "./images/Project_Diagram.jpg" width=auto height= auto>
-
-The proposed system uses the Convolutional Neural Network (CNN) architecture. CNN network consists of different layers that process the input alphabets and symbols and produces the desired output. I’m working on creating a model that can help society in a broader way by bridging the communication gap between Deaf-Muted people and everyone else. I propose a system, acting as an interface between the Deaf-mute community and non-deaf people based on American Sign Language (ASL). The speech Conversion system helps in decoding those symbols without the need of an expert person who understands sign language.
-
-The feature detection is done using various contour analysis and feature extraction built in the OpenCV Library. The hand feature detection is taken through any type of camera or webcam connected to a computer which is then processed into a binary image upon which contour analysis is done and to optimize such actions using OpenCV functions.
-
-The extracted feature is then passed into the neural network algorithms which process the feature through various layers and predict a single output which is then mapped to a text file.
-
-One of the most important objectives of the model is to decrease the communication gap between hearing-impaired people and everyone else and use this technology to its best in order to smooth integration of these differently-abled people in our society.
-
 # Challenges:
 
 ## Capture
@@ -80,7 +68,7 @@ One of the most important objectives of the model is to decrease the communicati
 - The system can interpret words and stores it in a database or a text file which later can be used to create snectences. The system can also be integrated into other operating systems or devices which will help to convert sign languge to text.
 - This project was developed with a limited knowledge of C++ and openCV. But there is unlimetied opprtunities to make it better.
 
-#### COPYRIGHTS -> AHMED SOLIMAN
+#### ©️®️ @ahmedesoliman
 
 A virtual reality computer vision application, implementing a system acting as an interface between the Deaf-Muted communities and non-deaf people based on American Sign Language (ASL).
 
