@@ -18,8 +18,8 @@ Implementing a virtual reality system acting as an interface between the Deaf-Mu
 
 ## Demo
 
-<gif src= "./demo/01-04-2022-459.gif" width=auto height= auto>
-<gif src= "./demo/01-04-2022-461.gif" width=auto height= auto>
+![myfile] (./demo/01-04-2022-459.gif)
+![Alt Text]<img src= "./demo/01-04-2022-461.gif" width=auto height= auto>
 
 ## What is the problem:
 
