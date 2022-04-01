@@ -69,7 +69,3 @@ Usually, a sign language interpreter is used by deaf people to seek help for tra
 - This project was developed with a limited knowledge of C++ and openCV. But there is unlimetied opprtunities to make it better.
 
 #### ©️®️ @ahmedesoliman
-
-A virtual reality computer vision application, implementing a system acting as an interface between the Deaf-Muted communities and non-deaf people based on American Sign Language (ASL).
-
-Technologies used: Unity Game Engine & OpenCVSharp + Unity free package
