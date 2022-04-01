@@ -16,6 +16,11 @@ Implementing a virtual reality system acting as an interface between the Deaf-Mu
   - Download free package from unity asset store OpenCVSharp + Unity
 - Windows 10+ Operating system platform (64-bit)
 
+## Demo
+
+<img src= "./demo/01-04-2022-459.gif" width=auto height= auto>
+<img src= "./demo/01-04-2022-461.gif" width=auto height= auto>
+
 ## What is the problem:
 
 Communication is a way of sharing our thoughts, ideas, and feelings with others. Verbal and Non-Verbal are the two modes of communication. Usually, everyone communicates with each other verbally. But speech impaired people cannot communicate with each other verbally. Then they communicate with everyone else via sign language which is a Non Verbal mode of communication. Most prominently this method is used by mute and deaf people.
