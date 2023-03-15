@@ -4,6 +4,20 @@ Sign Language AI VR GAme is a project build usiny Unity & openCvSharp
 
 Implementing a virtual reality system acting as an interface between the Deaf-Muted communities and non-deaf based on American Sign Language (ASL).
 
+## The Project
+
+The project's structure consists of several main components: the VR game itself, the machine learning model used to recognize ASL signs, and the Unity engine that powers the game. The project is developed using the C# programming language.
+
+The VR game is developed using the Unity engine and is designed to run on VR devices such as the Oculus Quest. The game presents the user with a series of ASL signs that they must perform correctly to progress through the game. The user's hand movements are tracked using the VR device's sensors, and the machine learning model is used to recognize the signs the user is making.
+
+The machine learning model used in the project is based on a Convolutional Neural Network (CNN) architecture. The model is trained on a dataset of ASL signs and is designed to recognize 24 different signs. The model is implemented using the OpenCVSharp library.
+
+The project also includes a web application that allows users to train the machine learning model on new data. The web application is built using the Flask framework and is designed to be run locally on the user's machine.
+
+## Architecture:
+
+<img src= "ttps://github.com/ahmedesoliman/Sign_Lang_AI/images/Project_Diagram.jpg" width=auto height= auto>
+
 #### Technologies used: Unity Game Engine & OpenCVSharp + Unity free package
 
 ## Requirements:
