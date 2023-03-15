@@ -16,7 +16,7 @@ The project also includes a web application that allows users to train the machi
 
 ## Architecture:
 
-<img src= "https://github.com/ahmedesoliman/Sign_Lang_AI/images/Project_Diagram.jpg" width=auto height= auto>
+<img src= "https://github.com/ahmedesoliman/Sign_Lang_AI/blob/master/images/Project_Diagram.jpg" width=auto height= auto>
 
 #### Technologies used: Unity Game Engine & OpenCVSharp + Unity free package
 
